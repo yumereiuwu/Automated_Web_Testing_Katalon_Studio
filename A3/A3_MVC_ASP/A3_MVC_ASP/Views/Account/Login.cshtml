@@ -1,0 +1,69 @@
+@model A3_MVC_ASP.Models.LoginVm
+@{
+    ViewBag.Title = "Đăng nhập";
+}
+<div class="container body-content-page" style="max-width: 480px;">
+    <h2 class="fw-bold mb-4" style="color: #9a1830;">Đăng nhập</h2>
+    @if (TempData["Msg"] != null)
+    {
+        <div class="alert alert-success py-2">@TempData["Msg"]</div>
+    }
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "needs-validation" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.ReturnUrl)
+        @Html.ValidationSummary(true, "", new { @class = "text-danger small" })
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = "email@..." })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger small" })
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mật khẩu</label>
+            <div class="position-relative">
+                @Html.PasswordFor(m => m.MatKhau, new { @class = "form-control pe-5", id = "loginPassword" })
+                <button class="btn btn-link text-secondary text-decoration-none position-absolute top-50 end-0 translate-middle-y me-2 p-0 d-none"
+                        type="button"
+                        id="toggleLoginPassword"
+                        aria-label="Hiện hoặc ẩn mật khẩu">
+                    <i class="bi bi-eye"></i>
+                </button>
+            </div>
+            @Html.ValidationMessageFor(m => m.MatKhau, "", new { @class = "text-danger small" })
+        </div>
+        <div class="mb-2">
+            <a href="@Url.Action("ForgotPassword", "Account")" class="small text-decoration-none">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Đăng nhập</button>
+        <a href="@Url.Action("Register")" class="btn btn-outline-secondary ms-2">Đăng ký</a>
+    }
+</div>
+
+@section scripts {
+    <script>
+        (function () {
+            var nut = document.getElementById("toggleLoginPassword");
+            var oNhap = document.getElementById("loginPassword");
+            if (!nut || !oNhap) return;
+
+            var capNhatNutMat = function () {
+                var coChu = (oNhap.value || "").trim().length > 0;
+                nut.classList.toggle("d-none", !coChu);
+                if (!coChu) {
+                    oNhap.type = "password";
+                    nut.innerHTML = '<i class="bi bi-eye"></i>';
+                }
+            };
+
+            nut.addEventListener("click", function () {
+                var dangHien = oNhap.type === "text";
+                oNhap.type = dangHien ? "password" : "text";
+                nut.innerHTML = dangHien ? '<i class="bi bi-eye"></i>' : '<i class="bi bi-eye-slash"></i>';
+            });
+
+            oNhap.addEventListener("input", capNhatNutMat);
+            capNhatNutMat();
+        })();
+    </script>
+}

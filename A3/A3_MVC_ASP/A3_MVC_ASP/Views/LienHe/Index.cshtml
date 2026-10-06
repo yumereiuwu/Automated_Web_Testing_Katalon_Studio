@@ -1,0 +1,72 @@
+@model A3_MVC_ASP.Models.LienHeGuiVm
+@{
+    ViewBag.Title = "Liên hệ";
+}
+<div class="container body-content-page contact-wrap">
+    <h1 class="contact-headline">Liên hệ hỗ trợ</h1>
+    <p class="contact-subtitle">Cần tư vấn sản phẩm, hỗ trợ đơn hàng hoặc hợp tác? Đội ngũ của chúng tôi sẽ phản hồi sớm trong giờ làm việc.</p>
+
+    @if (TempData["Msg"] != null)
+    {
+        <div class="alert alert-success">@TempData["Msg"]</div>
+    }
+
+    <div class="contact-grid">
+        <aside class="contact-card">
+            <h2 class="contact-info-title">Thông tin cửa hàng</h2>
+            <div class="contact-info-item">
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                <div>Số 32, đường Nguyễn văn Linh, phường Xuân Hòa, TP.Phúc Yên, Tỉnh Vĩnh Phúc</div>
+            </div>
+            <div class="contact-info-item">
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                <div>Hotline: 0348320822</div>
+            </div>
+            <div class="contact-info-item">
+                <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                <div>Email: 237480201013@hpu2.edu.vn</div>
+            </div>
+            <div class="contact-info-item mb-0">
+                <i class="bi bi-clock-fill" aria-hidden="true"></i>
+                <div>Thứ 2 - Chủ nhật: 8:00 - 22:00</div>
+            </div>
+        </aside>
+
+        <section class="contact-card">
+            @using (Html.BeginForm("Gui", "LienHe", FormMethod.Post, new { @class = "contact-form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger small mb-3" })
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Họ tên</label>
+                        @Html.TextBoxFor(m => m.HoTen, new { @class = "form-control", placeholder = "Nhập họ tên" })
+                        @Html.ValidationMessageFor(m => m.HoTen, "", new { @class = "text-danger small" })
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = "you@email.com" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger small" })
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Điện thoại</label>
+                        @Html.TextBoxFor(m => m.SoDienThoai, new { @class = "form-control", placeholder = "09xxxxxxxx" })
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Tiêu đề</label>
+                        @Html.TextBoxFor(m => m.TieuDe, new { @class = "form-control", placeholder = "Ví dụ: Hỏi về sản phẩm" })
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Nội dung</label>
+                        @Html.TextAreaFor(m => m.NoiDung, new { @class = "form-control", rows = 6, placeholder = "Mô tả chi tiết nhu cầu của bạn..." })
+                        @Html.ValidationMessageFor(m => m.NoiDung, "", new { @class = "text-danger small" })
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-danger contact-submit">Gửi liên hệ</button>
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>

@@ -1,0 +1,270 @@
+﻿@using System.Linq
+@using A3_MVC_ASP.Helpers
+@using A3_MVC_ASP.Models
+@{
+    var tenController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    var tenAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+    var soLuongGio = GioHangSessionHelper.TongSoLuong(Session);
+    var tongTienGio = GioHangSessionHelper.TongTien(Session);
+    var daDangNhap = Session["MaNguoiDung"] != null;
+    var laQuanTri = Session["VaiTro"] as string == "QuanTri";
+    List<string> dsDanhMucMenu;
+    using (var db = new DoAnVatA3Context())
+    {
+        dsDanhMucMenu = db.DanhMucs
+            .Where(x => x.ConHoatDong)
+            .OrderBy(x => x.TenDanhMuc)
+            .Select(x => x.TenDanhMuc)
+            .ToList();
+    }
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@(ViewBag.Title != null ? ViewBag.Title + " — " : "")Ăn vặt ngon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <header>
+        <div class="snack-topbar">
+            <div class="container d-flex flex-wrap justify-content-between align-items-center">
+                <span class="d-none d-sm-inline">Ăn là nghiện — Mua là mê</span>
+                <span class="d-sm-none small">Ăn là nghiện — Mua là mê</span>
+                <div class="d-flex align-items-center">
+                    <a href="https://www.facebook.com/yume.rei.2024" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/yumerei_05/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://github.com/yumereiuwu" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="@Url.Action("Index", "LienHe")" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="snack-mid-header">
+            <div class="container">
+                <div class="row align-items-center gy-3">
+                    <div class="col-lg-3 col-md-4 text-center text-md-start">
+                        <a href="@Url.Action("Index", "Home")" class="snack-logo">
+                            <img class="snack-logo-mark" src="@Url.Content("~/HinhAnh/icon_logo.jpg")" alt="Ăn vặt ngon" width="56" height="56" />
+                            <span>
+                                <span class="snack-logo-text d-block">Ăn vặt ngon</span>
+                                <span class="snack-logo-sub">Đồ ăn vặt chất lượng</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-8">
+                        <form class="snack-search" action="@Url.Action("Index", "SanPham")" method="get" role="search"
+                              data-suggest-url="@Url.Action("GoiYTimKiem", "SanPham")"
+                              data-detail-template="@Url.Action("ChiTiet", "SanPham", new { id = "__id__" })">
+                            <input type="search" name="q" value="@Request.QueryString["q"]" placeholder="Tìm kiếm..." autocomplete="off" aria-label="Tìm kiếm sản phẩm" />
+                            <button type="submit" aria-label="Tìm"><i class="bi bi-search"></i></button>
+                            <div class="snack-search-suggest d-none" role="listbox" aria-label="Gợi ý tìm kiếm"></div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 snack-header-actions">
+                        <div class="text-end">
+                            @if (daDangNhap)
+                            {
+                                <span class="small text-muted d-block">@Session["HoTen"]</span>
+                                <a href="@Url.Action("Logout", "Account")">ĐĂNG XUẤT</a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("Login", "Account")">ĐĂNG NHẬP</a>
+                                <span class="text-muted"> · </span>
+                                <a href="@Url.Action("Register", "Account")">ĐĂNG KÝ</a>
+                            }
+                        </div>
+                        <a href="@Url.Action("Index", "GioHang")" class="snack-cart-mini">
+                            <i class="bi bi-bag-fill fs-5"></i>
+                            <span>GIỎ HÀNG / @tongTienGio.ToString("N0") đ</span>
+                            <span class="snack-cart-badge">@soLuongGio</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="snack-main-nav navbar navbar-expand-lg navbar-dark py-0" aria-label="Menu chính">
+            <div class="container">
+                <button class="navbar-toggler text-white border-white my-2" type="button" data-bs-toggle="collapse" data-bs-target="#snackNav" aria-controls="snackNav" aria-expanded="false" aria-label="Mở menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="snackNav">
+                    <div class="nav-inner w-100 py-lg-0 py-2">
+                        <a class="nav-link @(tenController == "Home" && tenAction == "Index" ? "active" : null)" href="@Url.Action("Index", "Home")">TRANG CHỦ</a>
+                        <a class="nav-link @(tenController == "Home" && tenAction == "About" ? "active" : null)" href="@Url.Action("About", "Home")">GIỚI THIỆU</a>
+                        <div class="nav-item dropdown d-inline-block">
+                            <a class="nav-link dropdown-toggle @(tenController == "SanPham" ? "active" : null)" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SẢN PHẨM</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="@Url.Action("Index", "SanPham")">Tất cả sản phẩm</a></li>
+                                @foreach (var dm in dsDanhMucMenu)
+                                {
+                                    <li><a class="dropdown-item" href="@Url.Action("Index", "SanPham", new { dm = dm })">@dm</a></li>
+                                }
+                            </ul>
+                        </div>
+                        <a class="nav-link @(tenController == "TinTuc" ? "active" : null)" href="@Url.Action("Index", "TinTuc")">TIN TỨC</a>
+                        <a class="nav-link @(tenController == "LienHe" ? "active" : null)" href="@Url.Action("Index", "LienHe")">LIÊN HỆ</a>
+                        <div class="nav-item dropdown d-inline-block">
+                            <a class="nav-link dropdown-toggle @(tenController == "ChinhSach" ? "active" : null)" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CHÍNH SÁCH</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="@Url.Action("GiaoHang", "ChinhSach")">Giao hàng</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("DoiTra", "ChinhSach")">Đổi trả</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("BaoMat", "ChinhSach")">Bảo mật</a></li>
+                            </ul>
+                        </div>
+                        @if (laQuanTri)
+                        {
+                            <a class="nav-link @(tenController == "Admin" || tenController == "BaoCao" ? "active" : null)" href="@Url.Action("Index", "Admin")">QUẢN TRỊ</a>
+                        }
+                        <a class="nav-link @(tenController == "ChinhSach" && tenAction == "Faq" ? "active" : null)" href="@Url.Action("Faq", "ChinhSach")">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="body-wrap">
+        @RenderBody()
+    </div>
+
+    <footer class="snack-footer snack-footer-green">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="snack-footer-logo">
+                            <i class="bi bi-shop-window"></i>
+                        </div>
+                        <strong class="snack-footer-title">Ăn vặt ngon</strong>
+                    </div>
+                    <div class="snack-footer-text small">
+                        <div class="mb-2"><strong>Hotline:</strong> 0348 320 822</div>
+                        <div class="mb-2"><strong>Địa chỉ:</strong> Số 32, đường Nguyễn Văn Linh, phường Xuân Hòa, TP. Phúc Yên, tỉnh Vĩnh Phúc</div>
+                        <div class="opacity-75">&copy; @DateTime.Now.Year Ăn vặt ngon.</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="snack-footer-col-title">Truy cập nhanh</div>
+                    <ul class="snack-footer-links">
+                        <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                        <li><a href="@Url.Action("Index", "SanPham")">Sản phẩm</a></li>
+                        <li><a href="@Url.Action("Index", "GioHang")">Giỏ hàng</a></li>
+                        <li><a href="@Url.Action("Index", "LienHe")">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="snack-footer-col-title">Địa chỉ của chúng tôi</div>
+                    <div class="snack-footer-fb">
+                        <iframe title="Bản đồ cửa hàng"
+                                src="https://www.google.com/maps?q=S%E1%BB%91%2032%2C%20%C4%91%C6%B0%E1%BB%9Dng%20Nguy%E1%BB%85n%20V%C4%83n%20Linh%2C%20ph%C6%B0%E1%BB%9Dng%20Xu%C3%A2n%20H%C3%B2a%2C%20TP.%20Ph%C3%BAc%20Y%C3%AAn%2C%20t%E1%BB%89nh%20V%C4%A9nh%20Ph%C3%BAc&output=embed"
+                                width="100%"
+                                height="160"
+                                style="border:none;overflow:hidden"
+                                loading="lazy"
+                                scrolling="no"
+                                frameborder="0"
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="snack-footer-col-title">Địa chỉ của chúng tôi</div>
+                        <div class="snack-footer-fb">
+                            <iframe title="Bản đồ cửa hàng"
+                                    src="https://www.google.com/maps?q=S%E1%BB%91%2032%2C%20%C4%91%C6%B0%E1%BB%9Dng%20Nguy%E1%BB%85n%20V%C4%83n%20Linh%2C%20ph%C6%B0%E1%BB%9Dng%20Xu%C3%A2n%20H%C3%B2a%2C%20TP.%20Ph%C3%BAc%20Y%C3%AAn%2C%20t%E1%BB%89nh%20V%C4%A9nh%20Ph%C3%BAc&output=embed"
+                                    width="100%"
+                                    height="160"
+                                    style="border:none;overflow:hidden"
+                                    loading="lazy"
+                                    scrolling="no"
+                                    frameborder="0"
+                                    allowfullscreen>
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="mt-3">
+                            <a class="snack-footer-fb-link" href="https://www.google.com/maps/search/?api=1&query=S%E1%BB%91+32%2C+%C4%91%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+V%C4%83n+Linh%2C+ph%C6%B0%E1%BB%9Dng+Xu%C3%A2n+H%C3%B2a%2C+TP.+Ph%C3%BAc+Y%C3%AAn%2C+t%E1%BB%89nh+V%C4%A9nh+Ph%C3%BAc" target="_blank" rel="noopener">
+                                Mở Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        (function () {
+            var formTim = document.querySelector(".snack-search");
+            if (!formTim) return;
+            var oNhap = formTim.querySelector('input[name="q"]');
+            var bangGoiY = formTim.querySelector(".snack-search-suggest");
+            var urlGoiY = formTim.getAttribute("data-suggest-url");
+            var mauLinkChiTiet = formTim.getAttribute("data-detail-template") || "";
+            if (!oNhap || !bangGoiY || !urlGoiY) return;
+
+            var henGio;
+            var anBang = function () {
+                bangGoiY.classList.add("d-none");
+                bangGoiY.innerHTML = "";
+            };
+            var dinhDangVnd = function (v) {
+                return Number(v || 0).toLocaleString("vi-VN") + " đ";
+            };
+            var veBang = function (items) {
+                if (!items || !items.length) {
+                    anBang();
+                    return;
+                }
+                bangGoiY.innerHTML = items.map(function (x) {
+                    var link = mauLinkChiTiet.replace("__id__", x.id);
+                    return '<a class="snack-search-item" href="' + link + '">' +
+                        '<img src="' + x.hinh + '" alt="' + x.ten + '" onerror="this.onerror=null;this.src=\'@Url.Content("~/Content/SanPhamImages/placeholder.svg")\';" />' +
+                        '<div class="snack-search-item-body">' +
+                        '<strong>' + x.ten + '</strong>' +
+                        '<span>' + x.danhMuc + '</span>' +
+                        '<div class="snack-search-item-price">' +
+                        (Number(x.giaGoc) > Number(x.giaBan) ? ('<del>' + dinhDangVnd(x.giaGoc) + '</del>') : '') +
+                        '<b>' + dinhDangVnd(x.giaBan) + '</b>' +
+                        '</div>' +
+                        '</div>' +
+                        '</a>';
+                }).join("");
+                bangGoiY.classList.remove("d-none");
+            };
+
+            oNhap.addEventListener("input", function () {
+                var q = (oNhap.value || "").trim();
+                window.clearTimeout(henGio);
+                if (q.length < 1) {
+                    anBang();
+                    return;
+                }
+                henGio = window.setTimeout(function () {
+                    fetch(urlGoiY + "?q=" + encodeURIComponent(q), { headers: { "X-Requested-With": "XMLHttpRequest" } })
+                        .then(function (r) { return r.ok ? r.json() : []; })
+                        .then(veBang)
+                        .catch(anBang);
+                }, 160);
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!formTim.contains(e.target)) anBang();
+            });
+            oNhap.addEventListener("focus", function () {
+                if (bangGoiY.children.length > 0) bangGoiY.classList.remove("d-none");
+            });
+        })();
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

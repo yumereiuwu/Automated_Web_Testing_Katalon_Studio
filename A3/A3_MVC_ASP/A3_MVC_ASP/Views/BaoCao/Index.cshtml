@@ -1,0 +1,97 @@
+@{
+    ViewBag.Title = "Báo cáo";
+    var tk = ViewBag.ThongKe as A3_MVC_ASP.Models.ThongKeTongQuanDto;
+    var nx = ViewBag.NhapXuatTon as System.Collections.Generic.List<A3_MVC_ASP.Models.NhapXuatTonRow>;
+    var dt = ViewBag.DoanhThuThang as System.Collections.Generic.List<A3_MVC_ASP.Models.DoanhThuThangRow>;
+    var nxPage = ViewBag.NxPage != null ? (int)ViewBag.NxPage : 1;
+    var nxTotalPages = ViewBag.NxTotalPages != null ? (int)ViewBag.NxTotalPages : 1;
+    var nxTotalItems = ViewBag.NxTotalItems != null ? (int)ViewBag.NxTotalItems : (nx != null ? nx.Count : 0);
+}
+<div class="admin-panel mb-3">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="small text-muted">Xuất báo cáo tổng quan, doanh thu và nhập-xuất-tồn sang Excel.</div>
+        <a href="@Url.Action("XuatExcel", "BaoCao")" class="btn btn-success btn-sm">
+            <i class="bi bi-file-earmark-excel me-1"></i> Xuất Excel
+        </a>
+    </div>
+</div>
+@if (tk != null)
+{
+    <div class="admin-panel mb-3">
+        <div class="row g-3">
+            <div class="col-md-4"><div class="p-3 rounded-3 border bg-light small">Đơn hàng: <strong>@tk.TongDonHang</strong></div></div>
+            <div class="col-md-4"><div class="p-3 rounded-3 border bg-light small">Doanh thu (đã xác nhận): <strong>@tk.TongDoanhThu.ToString("N0") đ</strong></div></div>
+            <div class="col-md-4"><div class="p-3 rounded-3 border bg-light small">Sản phẩm: <strong>@tk.TongSanPham</strong></div></div>
+            <div class="col-md-4"><div class="p-3 rounded-3 border bg-light small">Khách: <strong>@tk.TongKhachHang</strong></div></div>
+            <div class="col-md-4"><div class="p-3 rounded-3 border bg-light small">Chờ duyệt: <strong>@tk.DonChuaDuyet</strong></div></div>
+            <div class="col-md-4"><div class="p-3 rounded-3 border bg-light small">Sắp hết (&lt;10): <strong>@tk.SanPhamSapHet</strong></div></div>
+        </div>
+    </div>
+}
+<div class="admin-panel mb-3">
+    <h2 class="h6 fw-bold mb-3">Doanh thu theo tháng</h2>
+    <div class="admin-table-wrap">
+        <table class="table table-bordered table-sm admin-table">
+            <thead><tr><th>Năm</th><th>Tháng</th><th>Số đơn</th><th>Doanh thu</th></tr></thead>
+            <tbody>
+                @if (dt != null)
+                {
+                    foreach (var r in dt)
+                    {
+                        <tr><td>@r.Nam</td><td>@r.Thang</td><td>@r.TongDonHang</td><td>@r.DoanhThu.ToString("N0") đ</td></tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="admin-panel">
+    <h2 class="h6 fw-bold mb-3">Nhập — Xuất — Tồn</h2>
+    <div class="admin-table-wrap">
+        <table class="table table-bordered table-sm admin-table">
+            <thead>
+                <tr><th>SP</th><th>Tên</th><th>DM</th><th>Nhập</th><th>Bán</th><th>Tồn</th><th>Tiền nhập</th><th>Doanh thu</th></tr>
+            </thead>
+            <tbody>
+                @if (nx != null)
+                {
+                    foreach (var r in nx)
+                    {
+                        <tr>
+                            <td>@r.MaSanPham</td>
+                            <td>@r.TenSanPham</td>
+                            <td>@r.TenDanhMuc</td>
+                            <td>@r.TongSoLuongNhap.ToString("N0")</td>
+                            <td>@r.TongSoLuongBan.ToString("N0")</td>
+                            <td>@r.TonKhoHienTai</td>
+                            <td>@r.TongTienNhap.ToString("N0")</td>
+                            <td>@r.TongDoanhThu.ToString("N0")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    @if (nxTotalPages > 1)
+    {
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="small text-muted">Tổng @nxTotalItems sản phẩm</div>
+            <nav aria-label="Phân trang nhập xuất tồn">
+                <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item @(nxPage <= 1 ? "disabled" : "")">
+                        <a class="page-link" href="@Url.Action("Index", "BaoCao", new { nxPage = nxPage - 1 })">Trước</a>
+                    </li>
+                    @for (var p = 1; p <= nxTotalPages; p++)
+                    {
+                        <li class="page-item @(p == nxPage ? "active" : "")">
+                            <a class="page-link" href="@Url.Action("Index", "BaoCao", new { nxPage = p })">@p</a>
+                        </li>
+                    }
+                    <li class="page-item @(nxPage >= nxTotalPages ? "disabled" : "")">
+                        <a class="page-link" href="@Url.Action("Index", "BaoCao", new { nxPage = nxPage + 1 })">Sau</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    }
+</div>

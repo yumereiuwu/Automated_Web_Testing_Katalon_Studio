@@ -1,0 +1,41 @@
+@model A3_MVC_ASP.Models.RegisterVm
+@{
+    ViewBag.Title = "Đăng ký";
+}
+<div class="container body-content-page" style="max-width: 520px;">
+    <h2 class="fw-bold mb-4" style="color: #9a1830;">Đăng ký tài khoản</h2>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger small" })
+        <div class="mb-3">
+            <label class="form-label">Họ tên</label>
+            @Html.TextBoxFor(m => m.HoTen, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.HoTen, "", new { @class = "text-danger small" })
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger small" })
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mật khẩu</label>
+            @Html.PasswordFor(m => m.MatKhau, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MatKhau, "", new { @class = "text-danger small" })
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Xác nhận mật khẩu</label>
+            @Html.PasswordFor(m => m.MatKhauXacNhan, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MatKhauXacNhan, "", new { @class = "text-danger small" })
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Điện thoại</label>
+            @Html.TextBoxFor(m => m.SoDienThoai, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Địa chỉ</label>
+            @Html.TextBoxFor(m => m.DiaChi, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-danger">Đăng ký</button>
+    }
+</div>

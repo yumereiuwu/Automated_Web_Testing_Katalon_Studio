@@ -1,0 +1,8 @@
+=== HashData ===
+vnp_Amount=6000000&vnp_BankCode=VNPAYQR&vnp_Command=pay&vnp_CreateDate=20260413175706&vnp_CurrCode=VND&vnp_IpAddr=::1&vnp_Locale=vn&vnp_OrderInfo=VNPAY Sandbox thanh toan don DH20260413175706410&vnp_OrderType=other&vnp_ReturnUrl=http://localhost:61445/Vnpay/Return&vnp_TmnCode=LTAA0R9W&vnp_TxnRef=DH20260413175706410&vnp_Version=2.1.0
+
+=== SecureHash ===
+aaeae717be199f47dcce4045ec00da0f1e425e66099a1f22ca5814755cc852f1bdbab4e3421ed783b64824402d55f28427308352b75e998a3ac31b537cc78bb1
+
+=== Final URL ===
+https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=6000000&vnp_BankCode=VNPAYQR&vnp_Command=pay&vnp_CreateDate=20260413175706&vnp_CurrCode=VND&vnp_IpAddr=%3a%3a1&vnp_Locale=vn&vnp_OrderInfo=VNPAY+Sandbox+thanh+toan+don+DH20260413175706410&vnp_OrderType=other&vnp_ReturnUrl=http%3a%2f%2flocalhost%3a61445%2fVnpay%2fReturn&vnp_TmnCode=LTAA0R9W&vnp_TxnRef=DH20260413175706410&vnp_Version=2.1.0&vnp_SecureHash=aaeae717be199f47dcce4045ec00da0f1e425e66099a1f22ca5814755cc852f1bdbab4e3421ed783b64824402d55f28427308352b75e998a3ac31b537cc78bb1

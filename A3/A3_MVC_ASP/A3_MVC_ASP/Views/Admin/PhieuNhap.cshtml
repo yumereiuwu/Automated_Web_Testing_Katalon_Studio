@@ -1,0 +1,37 @@
+@model System.Collections.Generic.List<A3_MVC_ASP.Models.PhieuNhapRowVm>
+@{
+    ViewBag.Title = "Phiếu nhập";
+}
+<div class="admin-panel">
+    <div class="admin-panel-toolbar">
+        <a href="@Url.Action("PhieuNhapTao")" class="btn btn-success btn-admin-new"><i class="bi bi-plus-lg" aria-hidden="true"></i> Tạo phiếu</a>
+    </div>
+    <div class="admin-table-wrap">
+        <table class="table table-bordered table-hover admin-table">
+            <thead>
+                <tr><th>Mã phiếu</th><th>Nhà cung cấp</th><th>Ngày nhập</th><th>Tổng tiền</th><th>Thao tác</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var r in Model)
+                {
+                    <tr>
+                        <td>@r.MaPhieu</td>
+                        <td>@r.TenNhaCungCap</td>
+                        <td>@r.NgayNhap.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@r.TongTien.ToString("N0") đ</td>
+                        <td>
+                            @using (Html.BeginForm("PhieuNhapXoa", "Admin", FormMethod.Post, new { @class = "d-inline", onsubmit = "return confirm('Xóa phiếu nhập này? Hệ thống sẽ trừ lại tồn kho tương ứng.');" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@r.MaPhieuNhap" />
+                                <button type="submit" class="btn btn-danger btn-admin-del btn-sm">
+                                    <i class="bi bi-trash-fill" aria-hidden="true"></i> Xóa
+                                </button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

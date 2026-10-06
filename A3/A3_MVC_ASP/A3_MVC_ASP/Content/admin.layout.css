@@ -1,0 +1,270 @@
+/*
+ * admin.layout.css — Khung layout quản trị
+ * Nạp qua: ~/Content/admincss
+ * Chức năng: sidebar cố định, thanh trên (topbar), vùng nội dung chính, menu điều hướng,
+ *   responsive (thu gọn sidebar trên mobile).
+ */
+/* Admin: layout shell (sidebar, topbar, responsive) */
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: var(--admin-sidebar-width);
+    flex: 0 0 var(--admin-sidebar-width);
+    background: var(--admin-sidebar-bg);
+    color: var(--admin-sidebar-text);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1040;
+    transition: transform 0.22s ease, width 0.22s ease;
+    overflow-y: auto;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+.admin-sidebar-brand {
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(7, 13, 24, 0.2);
+}
+
+.admin-brand-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 2px solid rgba(255,255,255,.55);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.82rem;
+}
+
+.admin-brand-dot {
+    color: rgba(255,255,255,.7);
+    font-size: .9rem;
+}
+
+.admin-sidebar-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #2d3340;
+    flex-shrink: 0;
+}
+
+.admin-sidebar-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.admin-nav {
+    padding: 0.75rem 0 1.25rem;
+    flex: 1;
+}
+
+.admin-nav-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--admin-sidebar-muted);
+    padding: 0.65rem 1.25rem 0.35rem;
+    margin: 0;
+}
+
+.admin-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.55rem 1.25rem;
+    color: var(--admin-sidebar-text);
+    text-decoration: none;
+    font-size: 0.88rem;
+    border-left: 3px solid transparent;
+    transition: background 0.15s ease, color 0.15s ease;
+    border-radius: 0 8px 8px 0;
+    margin-right: .4rem;
+}
+
+.admin-nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.admin-nav-link.active {
+    background: linear-gradient(90deg, rgba(77, 171, 247, .22), rgba(77, 171, 247, .08));
+    color: #fff;
+    border-left-color: #5eb3ff;
+}
+
+.admin-nav-link i {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    width: 1.35rem;
+    text-align: center;
+}
+
+.admin-unread-badge {
+    margin-left: auto;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 999px;
+    min-width: 30px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0 0.4rem;
+}
+
+/* Main column */
+.admin-main {
+    flex: 1;
+    margin-left: var(--admin-sidebar-width);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: margin-left 0.22s ease;
+    width: 100%;
+}
+
+/* Top bar */
+.admin-topbar {
+    height: var(--admin-topbar-height);
+    background: var(--admin-topbar-bg);
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem 0 0.65rem;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    border-bottom: 1px solid #e8edf3;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.admin-topbar-toggle {
+    background: transparent;
+    border: 0;
+    color: #334155;
+    font-size: 1.5rem;
+    padding: 0.35rem 0.6rem;
+    line-height: 1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.admin-topbar-toggle:hover {
+    background: #f1f5f9;
+}
+
+.admin-topbar-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.admin-topbar-user .admin-sidebar-avatar {
+    width: 34px;
+    height: 34px;
+    background: #e2e8f0;
+    color: #334155 !important;
+}
+
+.admin-topbar-icon-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #e6ebf2;
+    background: #fff;
+    color: #4a5568;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.admin-topbar-icon-btn:hover {
+    background: #f8fafc;
+}
+
+.admin-topbar-dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: #fb7185;
+    color: #fff;
+    font-size: 0.65rem;
+    line-height: 16px;
+    text-align: center;
+    border: 2px solid #fff;
+    font-weight: 700;
+}
+
+.admin-topbar-dot.success {
+    background: #34d399;
+}
+
+/* Collapsed sidebar (desktop) */
+.admin-wrapper.admin-collapsed .admin-sidebar {
+    transform: translateX(-100%);
+}
+
+.admin-wrapper.admin-collapsed .admin-main {
+    margin-left: 0;
+}
+
+/* Overlay when sidebar open on small screens */
+.admin-sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1035;
+}
+
+.admin-wrapper:not(.admin-collapsed) .admin-sidebar-backdrop.show {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .admin-sidebar-backdrop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .admin-main {
+        margin-left: 0;
+    }
+
+    .admin-wrapper.admin-mobile-open .admin-sidebar {
+        transform: translateX(0);
+    }
+}
+

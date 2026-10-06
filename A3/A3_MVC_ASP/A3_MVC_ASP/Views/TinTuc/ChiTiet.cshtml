@@ -1,0 +1,60 @@
+@model A3_MVC_ASP.Models.TinTucChiTietVm
+@{
+    ViewBag.Title = Model.TieuDe;
+}
+
+<div class="container body-content-page news-detail-page">
+    <article class="news-detail-card">
+        <div class="news-detail-meta">@Model.NgayText</div>
+        <h1 class="news-detail-title">@Model.TieuDe</h1>
+
+        @if (Model?.DoanNoiDung != null)
+        {
+            foreach (var doan in Model.DoanNoiDung)
+            {
+                <p>@doan</p>
+            }
+        }
+
+        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-secondary news-detail-back-btn">
+            <i class="bi bi-arrow-left-short"></i> Quay lại trang chủ
+        </a>
+    </article>
+</div>
+
+<style>
+    .news-detail-page {
+        max-width: 930px;
+    }
+
+    .news-detail-page .news-detail-card {
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 16px;
+        box-shadow: 0 10px 24px rgba(24, 24, 24, 0.08);
+        padding: 1.2rem 1.3rem;
+        line-height: 1.75;
+    }
+
+    .news-detail-page .news-detail-meta {
+        display: inline-block;
+        background: #6f8f3a;
+        color: #fff;
+        border-radius: 999px;
+        padding: 0.2rem 0.7rem;
+        font-size: 0.84rem;
+        font-weight: 700;
+        margin-bottom: 0.7rem;
+    }
+
+    .news-detail-page .news-detail-title {
+        color: #2f4f1f;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    .news-detail-page .news-detail-back-btn {
+        border-radius: 999px;
+        margin-top: 0.7rem;
+    }
+</style>

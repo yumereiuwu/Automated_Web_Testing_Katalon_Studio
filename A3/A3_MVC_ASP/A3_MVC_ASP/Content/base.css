@@ -1,0 +1,48 @@
+/*
+ * base.css — Giao diện nền toàn site (shop)
+ * Nạp qua: BundleConfig → bundle ~/Content/css, _Layout.cshtml dùng @Styles.Render
+ * Chức năng: biến màu theme (--snack-*), font chữ, body/layout cột, vùng nội dung trang (body-content-page),
+ *   style chung cho form/link trong trang nội dung.
+ */
+/* ===== Base (global) ===== */
+:root {
+    --snack-gold: #6f8f3a;
+    --snack-gold-dark: #56712c;
+    --snack-gold-light: #e9f2d8;
+    --snack-red: #c41e3a;
+    --snack-red-dark: #9a1830;
+    --snack-text: #2c1810;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+    color: var(--snack-text);
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-wrap {
+    flex: 1;
+}
+
+a.product-row-link:hover {
+    color: var(--snack-red-dark) !important;
+    text-decoration: underline !important;
+}
+
+.body-content-page {
+    padding: 1.5rem 0 2.5rem;
+}
+
+.body-content-page input[type="search"],
+.body-content-page input[type="text"],
+.body-content-page select,
+.body-content-page textarea {
+    max-width: 100%;
+}

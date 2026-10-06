@@ -1,0 +1,227 @@
+@using System.Globalization
+@using System.Linq
+@model System.Collections.Generic.IList<A3_MVC_ASP.Models.SanPhamListItemVm>
+@{
+    ViewBag.Title = "Sản phẩm";
+    var dsDanhMuc = (ViewBag.DanhMucList as IEnumerable<string> ?? Enumerable.Empty<string>()).ToList();
+    var sanPhamGanDay = (Model ?? new List<A3_MVC_ASP.Models.SanPhamListItemVm>()).FirstOrDefault();
+    var tongSanPham = ViewBag.TotalItems != null ? (int)ViewBag.TotalItems : (Model ?? new List<A3_MVC_ASP.Models.SanPhamListItemVm>()).Count;
+    var kichThuocTrang = ViewBag.PageSize != null ? (int)ViewBag.PageSize : 9;
+    var trangHienTai = ViewBag.Page != null ? (int)ViewBag.Page : 1;
+    var tongTrang = ViewBag.TotalPages != null ? (int)ViewBag.TotalPages : 1;
+    var tuSo = tongSanPham == 0 ? 0 : ((trangHienTai - 1) * kichThuocTrang + 1);
+    var denSo = tongSanPham == 0 ? 0 : System.Math.Min(trangHienTai * kichThuocTrang, tongSanPham);
+    var kieuSapXep = (ViewBag.Sort as string ?? "").Trim().ToLowerInvariant();
+}
+
+<div class="container body-content-page">
+    <div class="shop-head">
+        <div class="shop-breadcrumb">
+            <a href="@Url.Action("Index", "Home")">TRANG CHỦ</a>
+            <span>/</span>
+            <strong>SẢN PHẨM</strong>
+        </div>
+        <div class="shop-toolbar">
+            <span>Hiển thị <span id="shopCountStart">@tuSo</span>–<span id="shopCountText">@denSo</span> của @tongSanPham kết quả</span>
+            <select id="shopSortSelect" name="sort" aria-label="Sắp xếp sản phẩm">
+                <option value="" @(string.IsNullOrEmpty(kieuSapXep) ? "selected" : null)>Sắp xếp mặc định</option>
+                <option value="price_asc" @(kieuSapXep == "price_asc" ? "selected" : null)>Giá tăng dần</option>
+                <option value="price_desc" @(kieuSapXep == "price_desc" ? "selected" : null)>Giá giảm dần</option>
+                <option value="newest" @(kieuSapXep == "newest" ? "selected" : null)>Mới nhất</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <aside class="col-lg-3">
+            <div class="shop-sidebar">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+                <ul class="shop-categories">
+                    <li><a href="@Url.Action("Index", "SanPham")">Tất cả sản phẩm</a></li>
+                    @foreach (var dm in dsDanhMuc)
+                    {
+                        <li><a href="@Url.Action("Index", "SanPham", new { dm = dm })">@dm</a></li>
+                    }
+                </ul>
+
+                <h3>LỌC THEO GIÁ</h3>
+                <div class="shop-price-filter">
+                    <input id="shopPriceRange" type="range" min="0" max="290000" step="5000" value="290000" />
+                    <div class="shop-price-filter-row">
+                        <button id="shopApplyPrice" type="button">LỌC</button>
+                        <strong>Giá: 0 ₫ – <span id="shopPriceValue">290.000 ₫</span></strong>
+                    </div>
+                </div>
+
+                <h3>SẢN PHẨM ĐÃ XEM GẦN ĐÂY</h3>
+                @if (sanPhamGanDay != null)
+                {
+                    <a href="@Url.Action("ChiTiet", "SanPham", new { id = sanPhamGanDay.MaSanPham })" class="shop-recent-item">
+                        <img src="@Url.Content("~/Content/SanPhamImages/" + (sanPhamGanDay.HinhAnh ?? "no-image.png"))"
+                             alt="@sanPhamGanDay.TenSanPham"
+                             onerror="this.onerror=null;this.src='@Url.Content("~/Content/SanPhamImages/placeholder.svg")';" />
+                        <span>@sanPhamGanDay.TenSanPham</span>
+                    </a>
+                }
+            </div>
+        </aside>
+
+        <div class="col-lg-9">
+            <div class="row g-4">
+                @if (Model == null || Model.Count == 0)
+                {
+                    <div class="col-12">
+                        <div class="alert alert-light border">Không có sản phẩm phù hợp.</div>
+                    </div>
+                }
+                else
+                {
+                    foreach (var item in Model)
+                    {
+                        var giaGoc = item.GiaBan;
+                        var giaSauGiam = giaGoc * (100 - item.PhanTramGiam) / 100;
+                        var giaHienThi = item.PhanTramGiam > 0 ? giaSauGiam : giaGoc;
+                        <div class="col-12 col-md-6 col-xl-4" data-product-item="1" data-sort-price="@giaHienThi.ToString(CultureInfo.InvariantCulture)" data-sort-name="@item.TenSanPham.ToLowerInvariant()" data-sort-id="@item.MaSanPham">
+                            <a href="@Url.Action("ChiTiet", "SanPham", new { id = item.MaSanPham })"
+                               class="shop-product-card"
+                               data-price="@giaHienThi.ToString(CultureInfo.InvariantCulture)">
+                                <div class="shop-product-thumb">
+                                    @if (item.PhanTramGiam > 0)
+                                    {
+                                        <span class="shop-sale-badge">Giảm giá!</span>
+                                    }
+                                    <img src="@Url.Content("~/Content/SanPhamImages/" + (item.HinhAnh ?? "no-image.png"))"
+                                         alt="@item.TenSanPham"
+                                         onerror="this.onerror=null;this.src='@Url.Content("~/Content/SanPhamImages/placeholder.svg")';" />
+                                </div>
+                                <div class="shop-product-info">
+                                    <small>@item.TenDanhMuc</small>
+                                    <h4>@item.TenSanPham</h4>
+                                    <div class="shop-price">
+                                        @if (item.PhanTramGiam > 0)
+                                        {
+                                            <del>@giaGoc.ToString("N0") ₫</del>
+                                            <strong>@giaSauGiam.ToString("N0") ₫</strong>
+                                        }
+                                        else
+                                        {
+                                            <strong>@giaGoc.ToString("N0") ₫</strong>
+                                        }
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+            <div id="shopEmptyByPrice" class="alert alert-light border mt-3 d-none">Không có sản phẩm phù hợp trong mức giá đã chọn.</div>
+            @if (tongTrang > 1)
+            {
+                <nav class="mt-3" aria-label="Phân trang sản phẩm">
+                    <ul class="pagination pagination-sm mb-0">
+                        <li class="page-item @(trangHienTai <= 1 ? "disabled" : null)">
+                            <a class="page-link" href="@Url.Action("Index", "SanPham", new { q = ViewBag.SearchQuery, dm = ViewBag.DanhMuc, sort = ViewBag.Sort, page = trangHienTai - 1 })">«</a>
+                        </li>
+                        @for (var p = 1; p <= tongTrang; p++)
+                        {
+                            <li class="page-item @(p == trangHienTai ? "active" : null)">
+                                <a class="page-link" href="@Url.Action("Index", "SanPham", new { q = ViewBag.SearchQuery, dm = ViewBag.DanhMuc, sort = ViewBag.Sort, page = p })">@p</a>
+                            </li>
+                        }
+                        <li class="page-item @(trangHienTai >= tongTrang ? "disabled" : null)">
+                            <a class="page-link" href="@Url.Action("Index", "SanPham", new { q = ViewBag.SearchQuery, dm = ViewBag.DanhMuc, sort = ViewBag.Sort, page = trangHienTai + 1 })">»</a>
+                        </li>
+                    </ul>
+                </nav>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        (function () {
+            var thanhGia = document.getElementById("shopPriceRange");
+            var chuGia = document.getElementById("shopPriceValue");
+            var nutLoc = document.getElementById("shopApplyPrice");
+            var chuDenSo = document.getElementById("shopCountText");
+            var chuTuSo = document.getElementById("shopCountStart");
+            var thongBaoRong = document.getElementById("shopEmptyByPrice");
+            var oSapXep = document.getElementById("shopSortSelect");
+            var tuSoGoc = @tuSo;
+            if (!thanhGia || !chuGia || !nutLoc || !chuDenSo || !chuTuSo) return;
+
+            var dsThe = Array.prototype.slice.call(document.querySelectorAll(".shop-product-card"));
+            var dsCot = Array.prototype.slice.call(document.querySelectorAll("[data-product-item='1']"));
+            var luoi = document.querySelector(".col-lg-9 .row.g-4");
+            var dinhDangVnd = function (n) {
+                return Number(n || 0).toLocaleString("vi-VN") + " ₫";
+            };
+
+            var docSo = function (v) {
+                return Number((v || "0").toString().replace(",", ".") || 0);
+            };
+
+            var sapXep = function () {
+                if (!oSapXep || !luoi || !dsCot.length) return;
+                var mode = oSapXep.value || "";
+                var sorted = dsCot.slice().sort(function (a, b) {
+                    if (mode === "price_asc") {
+                        return docSo(a.getAttribute("data-sort-price")) - docSo(b.getAttribute("data-sort-price"));
+                    }
+                    if (mode === "price_desc") {
+                        return docSo(b.getAttribute("data-sort-price")) - docSo(a.getAttribute("data-sort-price"));
+                    }
+                    if (mode === "newest") {
+                        return docSo(b.getAttribute("data-sort-id")) - docSo(a.getAttribute("data-sort-id"));
+                    }
+                    var nameA = a.getAttribute("data-sort-name") || "";
+                    var nameB = b.getAttribute("data-sort-name") || "";
+                    return nameA.localeCompare(nameB);
+                });
+                sorted.forEach(function (col) { luoi.appendChild(col); });
+            };
+
+            var locGia = function () {
+                var max = Number(thanhGia.value || 0);
+                var soHien = 0;
+                dsThe.forEach(function (card) {
+                    var price = docSo(card.getAttribute("data-price") || "0");
+                    var col = card.closest(".col-12");
+                    if (!col) return;
+                    if (price <= max) {
+                        col.style.display = "";
+                        soHien++;
+                    } else {
+                        col.style.display = "none";
+                    }
+                });
+                chuGia.textContent = dinhDangVnd(max);
+                chuTuSo.textContent = soHien > 0 ? tuSoGoc : 0;
+                chuDenSo.textContent = soHien > 0 ? (tuSoGoc + soHien - 1) : 0;
+                if (thongBaoRong) {
+                    thongBaoRong.classList.toggle("d-none", soHien > 0);
+                }
+            };
+
+            thanhGia.addEventListener("input", function () {
+                chuGia.textContent = dinhDangVnd(thanhGia.value);
+                locGia();
+            });
+            nutLoc.addEventListener("click", locGia);
+            if (oSapXep) {
+                oSapXep.addEventListener("change", function () {
+                    var url = new URL(window.location.href);
+                    if (oSapXep.value) {
+                        url.searchParams.set("sort", oSapXep.value);
+                    } else {
+                        url.searchParams.delete("sort");
+                    }
+                    url.searchParams.set("page", "1");
+                    window.location.href = url.toString();
+                });
+            }
+            locGia();
+        })();
+    </script>
+}

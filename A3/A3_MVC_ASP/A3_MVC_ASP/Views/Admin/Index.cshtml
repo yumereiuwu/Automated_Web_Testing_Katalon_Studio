@@ -1,0 +1,246 @@
+@model A3_MVC_ASP.Models.ThongKeTongQuanDto
+@{
+    ViewBag.Title = "Tổng quan";
+    var donGanDay = ViewBag.RecentOrders as System.Collections.Generic.List<A3_MVC_ASP.Models.DashboardOrderItemVm>
+                       ?? new System.Collections.Generic.List<A3_MVC_ASP.Models.DashboardOrderItemVm>();
+    var spSapHet = ViewBag.LowStockProducts as System.Collections.Generic.List<A3_MVC_ASP.Models.DashboardLowStockVm>
+                           ?? new System.Collections.Generic.List<A3_MVC_ASP.Models.DashboardLowStockVm>();
+    var nhanDoanhThu = ViewBag.RevenueLabels as System.Collections.Generic.List<string>
+                        ?? new System.Collections.Generic.List<string>();
+    var giaTriDoanhThu = ViewBag.RevenueValues as System.Collections.Generic.List<decimal>
+                        ?? new System.Collections.Generic.List<decimal>();
+    var nhanJson = Html.Raw(System.Web.Helpers.Json.Encode(nhanDoanhThu));
+    var giaTriJson = Html.Raw(System.Web.Helpers.Json.Encode(giaTriDoanhThu));
+    var tongDonHang = Model != null ? Model.TongDonHang : 0;
+    var tongSanPham = Model != null ? Model.TongSanPham : 0;
+    var donChoXuLy = Model != null ? Model.DonChuaDuyet : 0;
+    var tongDoanhThu = Model != null ? Model.TongDoanhThu : 0;
+    var doanhThuNghin = Math.Round(tongDoanhThu / 1000m, 0, MidpointRounding.AwayFromZero);
+}
+<div class="admin-panel dashboard-hero mb-3">
+    <div>
+        <p class="dashboard-hero-kicker mb-1">ADMIN DASHBOARD</p>
+        <h2 class="dashboard-hero-title mb-1">Tổng quan hoạt động cửa hàng</h2>
+        <p class="dashboard-hero-sub mb-0">Theo dõi đơn hàng, doanh thu và tồn kho theo thời gian thực để xử lý nhanh hơn.</p>
+    </div>
+    <div class="dashboard-hero-actions">
+        <a href="@Url.Action("DonHang", "Admin")" class="btn btn-primary btn-sm"><i class="bi bi-card-checklist me-1"></i>Đơn hàng</a>
+        <a href="@Url.Action("SanPham", "Admin")" class="btn btn-outline-primary btn-sm"><i class="bi bi-box-seam me-1"></i>Sản phẩm</a>
+        <a href="@Url.Action("PhieuNhap", "Admin")" class="btn btn-outline-secondary btn-sm"><i class="bi bi-box-arrow-in-down me-1"></i>Phiếu nhập</a>
+    </div>
+</div>
+<div class="row g-3 mb-1">
+    <div class="col-xl-3 col-md-6">
+        <div class="card h-100 border rounded-4 shadow-sm">
+            <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge rounded-pill text-bg-light border">[@tongDonHang Đơn]</span>
+                    <span class="d-inline-flex align-items-center justify-content-center rounded-3 text-white" style="width:38px;height:38px;background:linear-gradient(135deg,#3b82f6,#2563eb);">
+                        <i class="bi bi-bag-check"></i>
+                    </span>
+                </div>
+                <div class="small text-muted">Tổng đơn hàng</div>
+                <div class="fs-4 fw-bold text-dark">@tongDonHang.ToString("N0")</div>
+                <div class="small text-secondary">Đơn đã ghi nhận trong hệ thống</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card h-100 border rounded-4 shadow-sm">
+            <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge rounded-pill text-bg-light border">[@doanhThuNghin K]</span>
+                    <span class="d-inline-flex align-items-center justify-content-center rounded-3 text-white" style="width:38px;height:38px;background:linear-gradient(135deg,#10b981,#0f766e);">
+                        <i class="bi bi-currency-dollar"></i>
+                    </span>
+                </div>
+                <div class="small text-muted">Doanh thu</div>
+                <div class="fs-4 fw-bold text-dark">@tongDoanhThu.ToString("N0") đ</div>
+                <div class="small text-secondary">Doanh thu đơn đã xác nhận</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card h-100 border rounded-4 shadow-sm">
+            <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge rounded-pill text-bg-light border">[@tongSanPham SP]</span>
+                    <span class="d-inline-flex align-items-center justify-content-center rounded-3 text-white" style="width:38px;height:38px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);">
+                        <i class="bi bi-box-seam"></i>
+                    </span>
+                </div>
+                <div class="small text-muted">Sản phẩm</div>
+                <div class="fs-4 fw-bold text-dark">@tongSanPham.ToString("N0")</div>
+                <div class="small text-secondary">Sản phẩm đang quản lý</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card h-100 border rounded-4 shadow-sm">
+            <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge rounded-pill text-bg-light border">[@donChoXuLy Chờ]</span>
+                    <span class="d-inline-flex align-items-center justify-content-center rounded-3 text-white" style="width:38px;height:38px;background:linear-gradient(135deg,#f59e0b,#d97706);">
+                        <i class="bi bi-hourglass-split"></i>
+                    </span>
+                </div>
+                <div class="small text-muted">Đơn chờ xử lý</div>
+                <div class="fs-4 fw-bold text-dark">@donChoXuLy.ToString("N0")</div>
+                <div class="small text-secondary">Đơn ở trạng thái chờ duyệt</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mt-1">
+    <div class="col-lg-8">
+        <div class="admin-panel dashboard-panel">
+            <div class="dashboard-panel-head">
+                <h2 class="dashboard-panel-title"><i class="bi bi-graph-up-arrow me-1"></i>Biểu đồ doanh thu</h2>
+                <span class="dashboard-panel-note">6 tháng gần nhất</span>
+            </div>
+            <div class="dashboard-chart-wrap">
+                <canvas id="revenueChart" height="110"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="admin-panel dashboard-panel">
+            <div class="dashboard-panel-head">
+                <h2 class="dashboard-panel-title"><i class="bi bi-exclamation-triangle me-1"></i>Sắp hết hàng</h2>
+            </div>
+            <div class="dashboard-stock-list">
+                @if (spSapHet.Count == 0)
+                {
+                    <p class="small text-muted mb-0">Hiện chưa có dữ liệu tồn kho.</p>
+                }
+                else
+                {
+                    foreach (var sp in spSapHet)
+                    {
+                        <div class="stock-item">
+                            <a class="stock-name" href="@Url.Action("SanPhamXem", "Admin", new { id = sp.MaSanPham })">
+                                @sp.TenSanPham ở <strong>mục</strong> @sp.TenDanhMuc còn <strong>tồn</strong>
+                                <span class="stock-qty">@sp.SoLuongTon</span>
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mt-1">
+    <div class="col-12">
+        <div class="admin-panel dashboard-panel">
+            <div class="dashboard-panel-head">
+                <h2 class="dashboard-panel-title"><i class="bi bi-receipt-cutoff me-1"></i>Đơn hàng mới nhất</h2>
+                <a href="@Url.Action("DonHang", "Admin")" class="btn btn-outline-primary btn-sm">Xem tất cả</a>
+            </div>
+            <div class="admin-table-wrap">
+                <table class="table table-hover admin-table dashboard-orders-table">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn</th>
+                            <th>Khách hàng</th>
+                            <th>Ngày đặt</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (donGanDay.Count == 0)
+                        {
+                            <tr><td colspan="6" class="text-center text-muted py-3">Chưa có đơn hàng.</td></tr>
+                        }
+                        else
+                        {
+                            foreach (var d in donGanDay)
+                            {
+                                var tenTrangThai = d.TrangThai == "ChoDuyet" ? "Chờ duyệt"
+                                    : d.TrangThai == "DaXacNhan" ? "Đã xác nhận"
+                                    : d.TrangThai == "DangGiao" ? "Đang giao"
+                                    : d.TrangThai == "DaGiao" ? "Đã giao"
+                                    : d.TrangThai == "DaHuy" ? "Đã hủy"
+                                    : d.TrangThai;
+                                <tr>
+                                    <td class="order-code">@d.MaDon</td>
+                                    <td class="order-customer">@d.TenKhachHang</td>
+                                    <td class="order-date">@d.NgayDat.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td class="order-total">@d.TongThanhToan.ToString("N0") đ</td>
+                                    <td>
+                                        <span class="order-state @(d.TrangThai == "ChoDuyet" ? "waiting" : (d.TrangThai == "DaHuy" ? "cancel" : "normal"))">@tenTrangThai</span>
+                                    </td>
+                                    <td><a href="@Url.Action("DonHangXem", "Admin", new { id = d.MaDonHang })" class="btn btn-admin-edit btn-sm dashboard-order-detail-btn">Chi tiết</a></td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script>
+        (function () {
+            var bieuDo = document.getElementById("revenueChart");
+            if (!bieuDo || typeof Chart === "undefined") return;
+
+            var nhan = @nhanJson;
+            var giaTri = @giaTriJson;
+
+            new Chart(bieuDo, {
+                type: "line",
+                data: {
+                    labels: nhan,
+                    datasets: [{
+                        label: "Doanh thu",
+                        data: giaTri,
+                        borderColor: "#2f7dd7",
+                        backgroundColor: "rgba(47,125,215,0.14)",
+                        tension: 0.42,
+                        fill: true,
+                        borderWidth: 3,
+                        pointRadius: 4,
+                        pointHoverRadius: 5,
+                        pointBackgroundColor: "#ffffff",
+                        pointBorderWidth: 2,
+                        pointBorderColor: "#2f7dd7"
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function (ctx) {
+                                    return "Doanh thu: " + Number(ctx.parsed.y || 0).toLocaleString("vi-VN") + " đ";
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grace: "12%",
+                            grid: { color: "rgba(148,163,184,.2)" },
+                            ticks: {
+                                callback: function (v) { return Number(v || 0).toLocaleString("vi-VN") + " đ"; }
+                            }
+                        },
+                        x: {
+                            grid: { color: "rgba(148,163,184,.12)" }
+                        }
+                    }
+                }
+            });
+        })();
+    </script>
+}

@@ -1,0 +1,83 @@
+@model A3_MVC_ASP.Models.DonHang
+@{
+    ViewBag.Title = "Chi tiết đơn";
+    var ct = ViewBag.ChiTiet as System.Collections.Generic.List<A3_MVC_ASP.Models.DonHangCtVm>;
+    Func<string, string> hienThiTrangThai = s =>
+    {
+        switch (s ?? "")
+        {
+            case "ChoDuyet": return "Chờ duyệt";
+            case "DaXacNhan": return "Đã xác nhận";
+            case "DangGiao": return "Đang giao";
+            case "DaGiao": return "Đã giao";
+            case "DaHuy": return "Đã hủy";
+            default: return s ?? "";
+        }
+    };
+}
+<div class="admin-panel mb-3">
+    <p class="small mb-1">Ngày đặt: <strong>@Model.NgayDat</strong> — Trạng thái: <strong>@hienThiTrangThai(Model.TrangThai)</strong></p>
+    <p class="small mb-1">Khách: @Model.TenKhachHang — @Model.SoDienThoai</p>
+    <p class="small mb-1">Địa chỉ: @Model.DiaChiGiao</p>
+    <p class="small mb-0">Tổng: <strong>@Model.TongThanhToan.ToString("N0") đ</strong> (@Model.HinhThucThanhToan)</p>
+</div>
+<div class="admin-panel">
+    <h2 class="h6 fw-bold mb-3">Chi tiết sản phẩm</h2>
+    <div class="admin-table-wrap">
+        <table class="table table-bordered table-sm admin-table">
+            <thead>
+                <tr><th>Sản phẩm</th><th>SL</th><th>Đơn giá</th><th>Thành tiền</th></tr>
+            </thead>
+            <tbody>
+                @if (ct != null)
+                {
+                    foreach (var l in ct)
+                    {
+                        <tr>
+                            <td>@l.TenSanPham</td>
+                            <td>@l.SoLuong</td>
+                            <td>@l.DonGiaBan.ToString("N0")</td>
+                            <td>@(l.ThanhTien.HasValue ? l.ThanhTien.Value.ToString("N0") : "-")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    @using (Html.BeginForm("DonHangTrangThai", "Admin", FormMethod.Post, new { @class = "mt-3" }))
+    {
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.MaDonHang" />
+        <label class="form-label small">Đổi trạng thái</label>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+            @{ var tt = Model.TrangThai ?? ""; }
+            <select name="trangThai" class="form-select form-select-sm" style="max-width: 220px;">
+                <option value="ChoDuyet" @(tt == "ChoDuyet" ? "selected" : null)>Chờ duyệt</option>
+                <option value="DaXacNhan" @(tt == "DaXacNhan" ? "selected" : null)>Đã xác nhận</option>
+                <option value="DangGiao" @(tt == "DangGiao" ? "selected" : null)>Đang giao</option>
+                <option value="DaGiao" @(tt == "DaGiao" ? "selected" : null)>Đã giao</option>
+                <option value="DaHuy" @(tt == "DaHuy" ? "selected" : null)>Đã hủy</option>
+            </select>
+            <button type="submit" class="btn btn-primary btn-sm">Cập nhật trạng thái</button>
+        </div>
+    }
+    <p class="mt-3 mb-0">
+        <a href="@Url.Action("DonHang")" class="btn btn-outline-secondary admin-order-back-btn">
+            <i class="bi bi-arrow-left-short"></i> Quay lại danh sách đơn hàng
+        </a>
+    </p>
+</div>
+
+<style>
+    .admin-order-back-btn {
+        border-radius: 10px;
+        padding: 0.42rem 0.9rem;
+        font-weight: 600;
+    }
+
+    .admin-order-back-btn:hover {
+        background: #f3f4f6;
+        border-color: #c7cdd4;
+        color: #1f2937;
+    }
+</style>

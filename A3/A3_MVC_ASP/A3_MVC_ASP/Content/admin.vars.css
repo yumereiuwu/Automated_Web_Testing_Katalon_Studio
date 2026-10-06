@@ -1,0 +1,31 @@
+/*
+ * admin.vars.css — Quản trị: biến màu & nền trang
+ * Nạp qua: BundleConfig → ~/Content/admincss, _LayoutAdmin.cshtml
+ * Chức năng: định nghĩa --admin-* (sidebar, topbar, nền), font và overflow cho body admin.
+ */
+/* Admin: variables + base document */
+
+:root {
+    --admin-sidebar-bg: #162538;
+    --admin-sidebar-text: #e8eaed;
+    --admin-sidebar-muted: #8b929b;
+    --admin-sidebar-active: rgba(255, 255, 255, 0.09);
+    --admin-topbar-bg: #ffffff;
+    --admin-topbar-height: 52px;
+    --admin-sidebar-width: 260px;
+    --admin-page-bg: #eef1f5;
+    --admin-card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+html.admin-html,
+body.admin-body {
+    height: 100%;
+    margin: 0;
+}
+
+body.admin-body {
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
+    background: var(--admin-page-bg);
+    overflow-x: hidden;
+}
+

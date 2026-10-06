@@ -1,0 +1,312 @@
+@using System
+@using System.Collections.Generic
+@using A3_MVC_ASP.Models
+@{
+    var tenController = ViewContext.RouteData.Values["controller"] as string ?? "";
+    var tenAction = ViewContext.RouteData.Values["action"] as string ?? "";
+    var hoTen = Session["HoTen"] as string;
+    if (string.IsNullOrWhiteSpace(hoTen)) { hoTen = "Admin"; }
+    var tieuDeTrang = ViewBag.AdminHeading as string;
+    if (string.IsNullOrWhiteSpace(tieuDeTrang)) { tieuDeTrang = ViewBag.Title as string ?? "Quản trị"; }
+    var duongDan = ViewBag.AdminBreadcrumbs as IList<AdminBreadcrumbItem>;
+
+    var laTongQuan = tenController == "Admin" && tenAction == "Index";
+    var laDanhMuc = tenController == "Admin" && tenAction.StartsWith("DanhMuc", StringComparison.OrdinalIgnoreCase);
+    var laSanPham = tenController == "Admin" && tenAction.StartsWith("SanPham", StringComparison.OrdinalIgnoreCase);
+    var laLienHe = tenController == "Admin" && tenAction.StartsWith("QuanLyLienHe", StringComparison.OrdinalIgnoreCase);
+    var laDonHang = tenController == "Admin" && tenAction.StartsWith("DonHang", StringComparison.OrdinalIgnoreCase);
+    var laTaiKhoan = tenController == "Admin" && tenAction.StartsWith("QuanLyTaiKhoan", StringComparison.OrdinalIgnoreCase);
+    var laPhieuNhap = tenController == "Admin" && tenAction.StartsWith("PhieuNhap", StringComparison.OrdinalIgnoreCase);
+    var laBaoCao = tenController == "BaoCao" && string.Equals(tenAction, "Index", StringComparison.OrdinalIgnoreCase);
+}
+<!DOCTYPE html>
+<html lang="vi" class="admin-html">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@(ViewBag.Title != null ? ViewBag.Title + " — " : "")Quản trị</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    @Styles.Render("~/Content/admincss")
+</head>
+<body class="admin-body">
+    <div class="admin-wrapper" id="adminLayoutRoot">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-brand">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="admin-brand-icon"><i class="bi bi-shield-check"></i></div>
+                        <p class="admin-sidebar-title mb-0">SNACK ADMIN</p>
+                    </div>
+                    <i class="bi bi-circle-half admin-brand-dot"></i>
+                </div>
+            </div>
+            <nav class="admin-nav" aria-label="Menu quản trị">
+                <p class="admin-nav-label">Bảng điều khiển</p>
+                <a class="admin-nav-link @(laTongQuan ? "active" : null)" href="@Url.Action("Index", "Admin")">
+                    <i class="bi bi-speedometer2" aria-hidden="true"></i><span>Tổng quan</span>
+                </a>
+                <a class="admin-nav-link @(laDanhMuc ? "active" : null)" href="@Url.Action("DanhMuc", "Admin")">
+                    <i class="bi bi-folder2-open" aria-hidden="true"></i><span>Danh mục</span>
+                </a>
+                <a class="admin-nav-link @(laSanPham ? "active" : null)" href="@Url.Action("SanPham", "Admin")">
+                    <i class="bi bi-box-seam" aria-hidden="true"></i><span>Sản phẩm</span>
+                </a>
+                <a class="admin-nav-link @(laLienHe ? "active" : null)" href="@Url.Action("QuanLyLienHe", "Admin")" data-lienhe-url="@Url.Action("QuanLyLienHeUnreadCount", "Admin")">
+                    <i class="bi bi-envelope-open" aria-hidden="true"></i><span>Liên hệ</span>
+                    <span id="adminUnreadBadge" class="admin-unread-badge d-none">+0</span>
+                </a>
+
+                <p class="admin-nav-label">Hệ thống</p>
+                <a class="admin-nav-link @(laDonHang ? "active" : null)" href="@Url.Action("DonHang", "Admin")">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i><span>Đơn hàng</span>
+                </a>
+                <a class="admin-nav-link @(laTaiKhoan ? "active" : null)" href="@Url.Action("QuanLyTaiKhoan", "Admin")">
+                    <i class="bi bi-people" aria-hidden="true"></i><span>Quản lý tài khoản</span>
+                </a>
+                <a class="admin-nav-link @(laPhieuNhap ? "active" : null)" href="@Url.Action("PhieuNhap", "Admin")">
+                    <i class="bi bi-box-arrow-in-down" aria-hidden="true"></i><span>Phiếu nhập</span>
+                </a>
+                <a class="admin-nav-link @(laBaoCao ? "active" : null)" href="@Url.Action("Index", "BaoCao")">
+                    <i class="bi bi-graph-up-arrow" aria-hidden="true"></i><span>Báo cáo</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div class="admin-sidebar-backdrop" id="adminSidebarBackdrop" aria-hidden="true"></div>
+
+        <div class="admin-main">
+            <header class="admin-topbar">
+                <div class="d-flex align-items-center gap-2">
+                    <button type="button" class="admin-topbar-toggle" id="adminSidebarToggle" aria-label="Mở menu">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <button type="button" class="admin-topbar-icon-btn" id="adminQuickSearchBtn" title="Tìm kiếm"><i class="bi bi-search"></i></button>
+                    <button type="button" class="admin-topbar-icon-btn" id="adminFullscreenBtn" title="Toàn màn hình"><i class="bi bi-arrows-fullscreen"></i></button>
+                </div>
+                <div class="admin-topbar-user ms-auto">
+                    <button type="button" class="admin-topbar-icon-btn position-relative" title="Đơn chờ duyệt" id="adminBellBtn" onclick="window.location.href='@Url.Action("DonHang","Admin")'">
+                        <i class="bi bi-bell"></i>
+                        <span class="admin-topbar-dot d-none" id="adminPendingOrderDot">0</span>
+                    </button>
+                    <button type="button" class="admin-topbar-icon-btn position-relative" title="Liên hệ chưa đọc" id="adminMsgBtn" onclick="window.location.href='@Url.Action("QuanLyLienHe","Admin")'">
+                        <i class="bi bi-chat-left-dots"></i>
+                        <span class="admin-topbar-dot success d-none" id="adminUnreadContactDot">0</span>
+                    </button>
+                    <div class="admin-sidebar-avatar d-flex align-items-center justify-content-center text-white">
+                        <i class="bi bi-person-fill" style="font-size:1rem;"></i>
+                    </div>
+                    <span>@hoTen</span>
+                    <a href="@Url.Action("Index", "Home")" class="btn btn-sm btn-outline-secondary py-0 px-2" title="Trang chủ shop">Shop</a>
+                    <a href="@Url.Action("Logout", "Account")" class="btn btn-sm btn-secondary py-0 px-2">Thoát</a>
+                </div>
+            </header>
+
+            <main class="admin-page">
+                <div class="admin-page-head">
+                    <h1 class="admin-page-title">@tieuDeTrang</h1>
+                    <nav class="admin-breadcrumb" aria-label="Breadcrumb">
+                        @if (duongDan != null && duongDan.Count > 0)
+                        {
+                            <a href="@Url.Action("Index", "Admin")" title="Tổng quan"><i class="bi bi-house-door-fill" aria-hidden="true"></i> Trang chủ</a>
+                            <span class="admin-breadcrumb-sep" aria-hidden="true">&gt;</span>
+                            for (var i = 0; i < duongDan.Count; i++)
+                            {
+                                var item = duongDan[i];
+                                if (!string.IsNullOrEmpty(item.Url))
+                                {
+                                    <a href="@item.Url">@item.Text</a>
+                                }
+                                else
+                                {
+                                    <span>@item.Text</span>
+                                }
+                                if (i < duongDan.Count - 1)
+                                {
+                                    <span class="admin-breadcrumb-sep" aria-hidden="true">&gt;</span>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Index", "Admin")"><i class="bi bi-house-door-fill" aria-hidden="true"></i> Trang chủ</a>
+                            <span class="admin-breadcrumb-sep">&gt;</span>
+                            <span>@tieuDeTrang</span>
+                        }
+                    </nav>
+                </div>
+
+                @if (TempData["Msg"] != null)
+                {
+                    <div class="alert alert-success py-2 small mb-3">@TempData["Msg"]</div>
+                }
+                @if (TempData["Err"] != null)
+                {
+                    <div class="alert alert-danger py-2 small mb-3">@TempData["Err"]</div>
+                }
+
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    <div class="admin-quick-search d-none" id="adminQuickSearchModal">
+        <div class="admin-quick-search-panel">
+            <div class="admin-quick-search-head">
+                <i class="bi bi-search"></i>
+                <input id="adminQuickSearchInput" type="text" placeholder="Tìm nhanh trong admin..." autocomplete="off" />
+                <button type="button" id="adminQuickSearchClose" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="admin-quick-search-list" id="adminQuickSearchList">
+                <a href="@Url.Action("Index","Admin")" data-keywords="tong quan dashboard">Tổng quan</a>
+                <a href="@Url.Action("DanhMuc","Admin")" data-keywords="danh muc category">Danh mục</a>
+                <a href="@Url.Action("SanPham","Admin")" data-keywords="san pham product">Sản phẩm</a>
+                <a href="@Url.Action("DonHang","Admin")" data-keywords="don hang order">Đơn hàng</a>
+                <a href="@Url.Action("QuanLyTaiKhoan","Admin")" data-keywords="tai khoan user">Quản lý tài khoản</a>
+                <a href="@Url.Action("QuanLyLienHe","Admin")" data-keywords="lien he contact">Liên hệ</a>
+                <a href="@Url.Action("PhieuNhap","Admin")" data-keywords="phieu nhap kho">Phiếu nhập</a>
+                <a href="@Url.Action("Index","BaoCao")" data-keywords="bao cao report thong ke">Báo cáo</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var khungLayout = document.getElementById("adminLayoutRoot");
+            var nutMenu = document.getElementById("adminSidebarToggle");
+            var lopNen = document.getElementById("adminSidebarBackdrop");
+            if (!khungLayout || !nutMenu) return;
+
+            function laManHinhNho() {
+                return window.matchMedia("(max-width: 991.98px)").matches;
+            }
+
+            nutMenu.addEventListener("click", function () {
+                if (laManHinhNho()) {
+                    khungLayout.classList.toggle("admin-mobile-open");
+                    if (lopNen) lopNen.classList.toggle("show", khungLayout.classList.contains("admin-mobile-open"));
+                } else {
+                    khungLayout.classList.toggle("admin-collapsed");
+                }
+            });
+
+            if (lopNen) {
+                lopNen.addEventListener("click", function () {
+                    khungLayout.classList.remove("admin-mobile-open");
+                    lopNen.classList.remove("show");
+                });
+            }
+
+            window.addEventListener("resize", function () {
+                if (!laManHinhNho()) {
+                    khungLayout.classList.remove("admin-mobile-open");
+                    if (lopNen) lopNen.classList.remove("show");
+                }
+            });
+
+            var nutFull = document.getElementById("adminFullscreenBtn");
+            if (nutFull) {
+                nutFull.addEventListener("click", function () {
+                    if (!document.fullscreenElement) {
+                        document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+                    } else {
+                        document.exitFullscreen && document.exitFullscreen();
+                    }
+                });
+            }
+
+            var nutTimNhanh = document.getElementById("adminQuickSearchBtn");
+            var modalTimNhanh = document.getElementById("adminQuickSearchModal");
+            var oTimNhanh = document.getElementById("adminQuickSearchInput");
+            var nutDongTimNhanh = document.getElementById("adminQuickSearchClose");
+            var dsTimNhanh = document.getElementById("adminQuickSearchList");
+            var mucTimNhanh = dsTimNhanh ? Array.prototype.slice.call(dsTimNhanh.querySelectorAll("a")) : [];
+            var moTimNhanh = function () {
+                if (!modalTimNhanh) return;
+                modalTimNhanh.classList.remove("d-none");
+                if (oTimNhanh) oTimNhanh.focus();
+            };
+            var dongTimNhanh = function () {
+                if (!modalTimNhanh) return;
+                modalTimNhanh.classList.add("d-none");
+                if (oTimNhanh) oTimNhanh.value = "";
+                mucTimNhanh.forEach(function (x) { x.classList.remove("d-none"); });
+            };
+            if (nutTimNhanh) nutTimNhanh.addEventListener("click", moTimNhanh);
+            if (nutDongTimNhanh) nutDongTimNhanh.addEventListener("click", dongTimNhanh);
+            if (modalTimNhanh) {
+                modalTimNhanh.addEventListener("click", function (e) {
+                    if (e.target === modalTimNhanh) dongTimNhanh();
+                });
+            }
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") dongTimNhanh();
+                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+                    e.preventDefault();
+                    moTimNhanh();
+                }
+            });
+            if (oTimNhanh) {
+                oTimNhanh.addEventListener("input", function () {
+                    var q = (oTimNhanh.value || "").trim().toLowerCase();
+                    mucTimNhanh.forEach(function (item) {
+                        var text = (item.textContent || "").toLowerCase();
+                        var key = (item.getAttribute("data-keywords") || "").toLowerCase();
+                        item.classList.toggle("d-none", q.length > 0 && text.indexOf(q) === -1 && key.indexOf(q) === -1);
+                    });
+                });
+            }
+
+            var linkLienHe = document.querySelector("[data-lienhe-url]");
+            var badgeLienHe = document.getElementById("adminUnreadBadge");
+            if (linkLienHe && badgeLienHe) {
+                var urlDemChuaDoc = linkLienHe.getAttribute("data-lienhe-url");
+                var capNhatChuaDoc = function () {
+                    fetch(urlDemChuaDoc, { headers: { "X-Requested-With": "XMLHttpRequest" } })
+                        .then(function (r) { return r.ok ? r.json() : null; })
+                        .then(function (data) {
+                            var count = data && typeof data.count === "number" ? data.count : 0;
+                            if (count > 0) {
+                                badgeLienHe.textContent = "+" + count;
+                                badgeLienHe.classList.remove("d-none");
+                            } else {
+                                badgeLienHe.classList.add("d-none");
+                            }
+                        })
+                        .catch(function () { });
+                };
+                capNhatChuaDoc();
+                window.setInterval(capNhatChuaDoc, 8000);
+            }
+
+            var chamChoDuyet = document.getElementById("adminPendingOrderDot");
+            var chamLienHe = document.getElementById("adminUnreadContactDot");
+            var urlTopbar = "@Url.Action("TopbarStats", "Admin")";
+            var capNhatTopbar = function () {
+                fetch(urlTopbar, { headers: { "X-Requested-With": "XMLHttpRequest" } })
+                    .then(function (r) { return r.ok ? r.json() : null; })
+                    .then(function (data) {
+                        var pending = data && typeof data.pendingOrders === "number" ? data.pendingOrders : 0;
+                        var unread = data && typeof data.unreadContacts === "number" ? data.unreadContacts : 0;
+                        if (chamChoDuyet) {
+                            chamChoDuyet.textContent = pending > 99 ? "99+" : pending;
+                            chamChoDuyet.classList.toggle("d-none", pending <= 0);
+                        }
+                        if (chamLienHe) {
+                            chamLienHe.textContent = unread > 99 ? "99+" : unread;
+                            chamLienHe.classList.toggle("d-none", unread <= 0);
+                        }
+                    })
+                    .catch(function () { });
+            };
+            capNhatTopbar();
+            window.setInterval(capNhatTopbar, 8000);
+        })();
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

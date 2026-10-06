@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Giới thiệu";
+}
+<div class="container body-content-page about-page">
+    <main aria-labelledby="title" class="about-card">
+        <h2 id="title" class="fw-bold about-title">@ViewBag.Title</h2>
+
+        <p>
+            Chúng tôi là nhóm sinh viên trường Đại Học Sư Phạm Hà Nội 2, Khóa K49A-Công Nghệ Thông Tin ,thực hiện dự án xây dựng website bán đồ ăn vặt trực tuyến với mong muốn
+            mang đến một nền tảng mua sắm tiện lợi, nhanh chóng và hiện đại dành cho người dùng. Trong bối cảnh
+            thương mại điện tử ngày càng phát triển, nhu cầu mua sắm online các sản phẩm ăn vặt, bánh kẹo, nước uống
+            và các mặt hàng tiện lợi ngày càng tăng cao. Xuất phát từ thực tế đó, nhóm đã nghiên cứu, phân tích và
+            phát triển hệ thống website nhằm hỗ trợ khách hàng dễ dàng tìm kiếm sản phẩm, đặt hàng nhanh chóng và theo dõi
+            đơn hàng một cách thuận tiện.
+        </p>
+
+        <p>
+            Website được xây dựng với giao diện thân thiện, dễ sử dụng, phù hợp với nhiều đối tượng khách hàng như học sinh,
+            sinh viên, nhân viên văn phòng và những người yêu thích các sản phẩm ăn vặt. Hệ thống cung cấp đầy đủ các chức năng
+            cần thiết như đăng ký tài khoản, đăng nhập, tìm kiếm sản phẩm, thêm sản phẩm vào giỏ hàng, đặt hàng trực tuyến,
+            quản lý đơn hàng, thanh toán và liên hệ hỗ trợ khách hàng. Bên cạnh đó, trang quản trị dành cho quản trị viên
+            cũng được xây dựng nhằm hỗ trợ quản lý sản phẩm, đơn hàng, khách hàng, doanh thu, phiếu nhập và nhiều nghiệp vụ khác.
+        </p>
+
+        <p>
+            Trong quá trình thực hiện dự án, nhóm luôn chú trọng đến việc kết hợp giữa kiến thức lý thuyết đã học với
+            thực tiễn triển khai hệ thống. Dự án không chỉ giúp nâng cao kỹ năng lập trình web, thiết kế cơ sở dữ liệu,
+            phân tích hệ thống và xây dựng giao diện người dùng, mà còn giúp nhóm hiểu rõ hơn về quy trình vận hành của
+            một website bán hàng trực tuyến hoàn chỉnh.
+        </p>
+
+        <p class="mb-2 fw-semibold">Nhóm thực hiện dự án gồm các thành viên:</p>
+        <ul class="about-members">
+            <li>NGUYỄN HUY HOÀNG - 237480201013</li>
+            <li>HOÀNG ANH TUẤN - 237480201029</li>
+            <li>Phatsouna Doungchampa - 237480201038</li>
+        </ul>
+
+        <p>
+            Mỗi thành viên đều đóng góp công sức, ý tưởng và tinh thần trách nhiệm trong từng giai đoạn của dự án,
+            từ khảo sát yêu cầu, phân tích thiết kế hệ thống, xây dựng cơ sở dữ liệu, lập trình chức năng đến kiểm thử
+            và hoàn thiện sản phẩm.
+        </p>
+
+        <p class="mb-0">
+            Với tinh thần học hỏi, sáng tạo và hợp tác, nhóm hy vọng sản phẩm này không chỉ đáp ứng tốt yêu cầu của môn học
+            mà còn có khả năng ứng dụng thực tế, mang lại trải nghiệm mua sắm thuận tiện cho người dùng trong thời đại số.
+        </p>
+
+        <div class="row g-3 mt-3 about-team-cards">
+            <div class="col-12 col-md-4">
+                <div class="about-member-card text-center h-100">
+                    <img src="@Url.Content("~/HinhAnh/AvatarTV/NguyenHuyHoang.png")" alt="Nguyen Huy Hoang" class="about-member-avatar" />
+                    <h6 class="mb-1 mt-3">NGUYỄN HUY HOÀNG</h6>
+                    <div class="small text-muted">237480201013</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="about-member-card text-center h-100">
+                    <img src="@Url.Content("~/HinhAnh/AvatarTV/HoangAnhTuan.png")" alt="Hoang Anh Tuan" class="about-member-avatar" />
+                    <h6 class="mb-1 mt-3">HOÀNG ANH TUẤN</h6>
+                    <div class="small text-muted">237480201029</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="about-member-card text-center h-100">
+                    <img src="@Url.Content("~/HinhAnh/AvatarTV/Phatsouna.png")" alt="Phatsouna Doungchampa" class="about-member-avatar" />
+                    <h6 class="mb-1 mt-3">Phatsouna Doungchampa</h6>
+                    <div class="small text-muted">237480201038</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<style>
+    .about-page,
+    .about-page * {
+        font-family: 'Be Vietnam Pro', sans-serif;
+    }
+
+    .about-page .about-card {
+        background: #fff;
+        border: 1px solid #e7e7e7;
+        border-radius: 14px;
+        box-shadow: 0 8px 20px rgba(21, 21, 21, 0.06);
+        padding: 1.2rem 1.25rem;
+        line-height: 1.75;
+        color: #2f2f2f;
+    }
+
+    .about-page .about-title {
+        color: #2f4f1f;
+        margin-bottom: 1rem;
+    }
+
+    .about-page .about-members {
+        margin-bottom: 1rem;
+        padding-left: 1.15rem;
+    }
+
+    .about-page .about-team-cards {
+        border-top: 1px solid #ececec;
+        padding-top: 1rem;
+    }
+
+    .about-page .about-member-card {
+        border: 1px solid #e8eddc;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #ffffff 0%, #fbfdf7 100%);
+        box-shadow: 0 10px 24px rgba(38, 62, 26, 0.12);
+        padding: 1rem 0.85rem;
+        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .about-page .about-member-card:hover {
+        transform: translateY(-6px);
+        border-color: #cddbba;
+        box-shadow: 0 16px 32px rgba(38, 62, 26, 0.2);
+    }
+
+    .about-page .about-member-avatar {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        border: 3px solid #f2f2f2;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .about-page .about-member-card:hover .about-member-avatar {
+        transform: scale(1.08) rotate(1deg);
+        border-color: #dbe9c7;
+        box-shadow: 0 10px 24px rgba(55, 90, 36, 0.25);
+    }
+</style>

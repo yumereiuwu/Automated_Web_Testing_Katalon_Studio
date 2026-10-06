@@ -1,0 +1,300 @@
+/*
+ * site.header.css — Phần đầu trang shop
+ * Nạp qua: ~/Content/css (cùng base.css, home.css, …)
+ * Chức năng: thanh topbar (mạng xã hội), header giữa (logo, menu), ô tìm kiếm,
+ *   gợi ý tìm kiếm, giỏ hàng/nút đăng nhập trên header.
+ */
+/* Storefront header + navigation + search suggest */
+
+.snack-topbar {
+    background: #6f8f3a;
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 0.4rem 0;
+}
+
+.snack-topbar a {
+    color: #fff;
+    opacity: 0.95;
+    text-decoration: none;
+    margin-left: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.snack-topbar a:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.snack-mid-header {
+    background: #fff;
+    border-bottom: 1px solid rgba(111, 143, 58, 0.3);
+    padding: 0.85rem 0;
+    box-shadow: 0 2px 12px rgba(44, 24, 16, 0.06);
+}
+
+.snack-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--snack-text);
+}
+
+.snack-logo-mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #6f8f3a;
+    border: 3px solid #56712c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+img.snack-logo-mark {
+    display: block;
+    object-fit: contain;
+    padding: 3px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.snack-logo-text {
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--snack-red-dark);
+}
+
+.snack-logo-sub {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #56712c;
+    text-transform: uppercase;
+}
+
+.snack-search {
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1200;
+}
+
+.snack-search input[type="search"],
+.snack-search input[type="text"] {
+    width: 100%;
+    max-width: none;
+    border: 2px solid #efe3cc;
+    border-radius: 999px;
+    padding: 0.55rem 3rem 0.55rem 1.15rem;
+    font-size: 0.95rem;
+    background: #fdfbf6;
+}
+
+.snack-search input:focus {
+    outline: none;
+    border-color: #6f8f3a;
+    box-shadow: 0 0 0 3px rgba(111, 143, 58, 0.2);
+}
+
+.snack-search button {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: #6f8f3a;
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.snack-search button:hover {
+    background: #56712c;
+}
+
+.snack-search-suggest {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    max-height: 420px;
+    overflow: auto;
+}
+
+.snack-search-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.55rem 0.7rem;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f1f1;
+    color: #2c1810;
+}
+
+.snack-search-item:last-child {
+    border-bottom: none;
+}
+
+.snack-search-item:hover {
+    background: #faf8f3;
+}
+
+.snack-search-item img {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    object-fit: cover;
+    background: #f5efe3;
+    border: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.snack-search-item-body {
+    min-width: 0;
+    flex: 1;
+}
+
+.snack-search-item-body strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2f2f2f;
+    margin-bottom: 0.1rem;
+}
+
+.snack-search-item-body span {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.snack-search-item-price {
+    margin-top: 0.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.snack-search-item-price del {
+    color: #cb7b7b;
+    font-size: 0.84rem;
+}
+
+.snack-search-item-price b {
+    color: #101010;
+    font-size: 0.92rem;
+}
+
+.snack-header-actions {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.snack-header-actions a {
+    color: var(--snack-text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.snack-header-actions a:hover {
+    color: var(--snack-red);
+}
+
+.snack-cart-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    border: 2px solid #6f8f3a;
+    border-radius: 8px;
+    color: var(--snack-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.snack-cart-mini:hover {
+    background: #e9f2d8;
+    color: var(--snack-text);
+}
+
+.snack-cart-badge {
+    background: var(--snack-red);
+    color: #fff;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.snack-main-nav {
+    background: #6f8f3a;
+    padding: 0;
+    box-shadow: 0 4px 14px rgba(200, 156, 44, 0.25);
+}
+
+.snack-main-nav .nav-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.35rem 0;
+}
+
+.snack-main-nav .nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    padding: 0.65rem 0.9rem !important;
+    text-decoration: none;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.snack-main-nav .nav-link:hover,
+.snack-main-nav .nav-link:focus {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff !important;
+}
+
+.snack-main-nav .nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+.snack-main-nav .dropdown-menu {
+    border: 2px solid #e9f2d8;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.snack-main-nav .dropdown-item {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.snack-main-nav .dropdown-item:hover {
+    background: #e9f2d8;
+    color: var(--snack-red-dark);
+}

@@ -1,0 +1,135 @@
+@model A3_MVC_ASP.Models.DatHangVm
+@using System.Web.Mvc
+@using A3_MVC_ASP.Helpers
+@{
+    ViewBag.Title = "Đặt hàng";
+    var gio = ViewBag.GioHang as System.Collections.Generic.List<A3_MVC_ASP.Models.CartLine>;
+    var tinhThanhOptions = ViewBag.TinhThanhOptions as IEnumerable<SelectListItem> ?? Enumerable.Empty<SelectListItem>();
+    var tongHang = (decimal)ViewBag.TongTienHang;
+    var tongTam = tongHang + (Model != null ? Model.PhiVanChuyen : 0);
+}
+<div class="container body-content-page">
+    <h2 class="fw-bold mb-3" style="color: #9a1830;">Đặt hàng &amp; thanh toán</h2>
+    <p class="text-muted mb-4">Vui lòng kiểm tra thông tin người nhận và đơn hàng trước khi xác nhận để đảm bảo xử lý chính xác.</p>
+    @Html.ValidationSummary(true, "", new { @class = "alert alert-danger py-2" })
+
+    @using (Html.BeginForm("DatHang", "DonHang", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="p-4 border rounded-4 bg-white shadow-sm">
+                    <h5 class="fw-bold mb-3">Thông tin giao hàng</h5>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Họ tên người nhận</label>
+                        @Html.TextBoxFor(m => m.TenKhachHang, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Điện thoại</label>
+                        @Html.TextBoxFor(m => m.SoDienThoai, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Địa chỉ giao hàng <span class="text-danger">*</span></label>
+                        @Html.TextAreaFor(m => m.DiaChiGiao, new { @class = "form-control", rows = 3 })
+                        @Html.ValidationMessageFor(m => m.DiaChiGiao, "", new { @class = "text-danger small" })
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Tỉnh/Thành nhận hàng</label>
+                            @Html.DropDownListFor(m => m.TinhThanh, tinhThanhOptions, "-- Chọn tỉnh/thành --", new { @class = "form-select", id = "TinhThanh" })
+                            @Html.ValidationMessageFor(m => m.TinhThanh, "", new { @class = "text-danger small" })
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Phí vận chuyển (đ)</label>
+                            @Html.TextBoxFor(m => m.PhiVanChuyen, new { @class = "form-control", type = "number", min = 0, id = "PhiVanChuyen", @readonly = "readonly" })
+                            <div class="small text-muted mt-1">Phí ship sẽ cao hơn nếu bạn ở xa shop nhé hẹ hẹ</div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label class="form-label fw-semibold">Hình thức thanh toán</label>
+                        @Html.DropDownListFor(m => m.HinhThucThanhToan, new SelectList(new[] {
+                            new SelectListItem { Text = "Tiền mặt khi nhận hàng", Value = "TienMat" },
+                            new SelectListItem { Text = "VNPay", Value = "ChuyenKhoan" },
+                            new SelectListItem { Text = "MoMo", Value = "MoMo" }
+                        }, "Value", "Text"), new { @class = "form-select" })
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Ghi chú</label>
+                        @Html.TextAreaFor(m => m.GhiChu, new { @class = "form-control", rows = 2 })
+                    </div>
+                    <button type="submit" class="btn btn-danger px-4 py-2 fw-semibold">Xác nhận đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="p-4 border rounded-4 bg-white shadow-sm">
+                    <h5 class="fw-bold mb-3">Đơn hàng</h5>
+                    @if (gio != null)
+                    {
+                        foreach (var l in gio)
+                        {
+                            <div class="d-flex justify-content-between small py-2 border-bottom">
+                                <span>@l.TenSanPham × @l.SoLuong</span>
+                                <span>@l.ThanhTienHang.ToString("N0") đ</span>
+                            </div>
+                        }
+                    }
+                    <div class="pt-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Tạm tính</span>
+                            <strong id="TamTinhText">@tongHang.ToString("N0") đ</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Phí vận chuyển</span>
+                            <strong id="PhiVanChuyenText">@((Model != null ? Model.PhiVanChuyen : 0).ToString("N0")) đ</strong>
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-semibold">Tổng thanh toán</span>
+                            <strong class="text-danger" id="TongTamText">@tongTam.ToString("N0") đ</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section scripts {
+    <script>
+        (function () {
+            var oTinh = document.getElementById("TinhThanh");
+            var oPhi = document.getElementById("PhiVanChuyen");
+            var txtPhi = document.getElementById("PhiVanChuyenText");
+            var txtTong = document.getElementById("TongTamText");
+            var tamTinh = @tongHang;
+
+            if (!oTinh || !oPhi) return;
+
+            var tinhMienBac = {
+                "Hà Nội": true, "Hà Giang": true, "Cao Bằng": true, "Bắc Kạn": true, "Tuyên Quang": true,
+                "Lào Cai": true, "Yên Bái": true, "Thái Nguyên": true, "Lạng Sơn": true, "Bắc Giang": true,
+                "Phú Thọ": true, "Vĩnh Phúc": true, "Bắc Ninh": true, "Quảng Ninh": true, "Hải Dương": true,
+                "Hải Phòng": true, "Hưng Yên": true, "Thái Bình": true, "Nam Định": true, "Ninh Bình": true, "Hà Nam": true
+            };
+
+            function dinhDang(v) {
+                return Number(v || 0).toLocaleString("vi-VN") + " đ";
+            }
+
+            function tinhPhi(tinhThanh) {
+                return tinhMienBac[tinhThanh] ? 15000 : 20000;
+            }
+
+            function capNhat() {
+                var tinh = (oTinh.value || "").trim();
+                var phi = tinh ? tinhPhi(tinh) : 0;
+                oPhi.value = phi;
+                if (txtPhi) txtPhi.textContent = dinhDang(phi);
+                if (txtTong) txtTong.textContent = dinhDang(tamTinh + phi);
+            }
+
+            oTinh.addEventListener("change", capNhat);
+            capNhat();
+        })();
+    </script>
+}

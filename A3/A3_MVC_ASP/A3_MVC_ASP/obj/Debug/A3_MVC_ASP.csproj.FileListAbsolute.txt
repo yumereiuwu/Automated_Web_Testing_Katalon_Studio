@@ -1,0 +1,166 @@
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\A3_MVC_ASP.dll.config
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\A3_MVC_ASP.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\A3_MVC_ASP.pdb
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csc.exe
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csc.exe.config
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csc.rsp
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csi.exe
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csi.exe.config
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csi.rsp
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.Managed.Core.targets
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.AppContext.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Collections.Immutable.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Console.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Globalization.Calendars.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.Compression.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.FileSystem.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Net.Http.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Net.Sockets.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Reflection.Metadata.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.ValueTuple.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.XmlDocument.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.XPath.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\vbc.exe
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\vbc.exe.config
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\vbc.rsp
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\VBCSCompiler.exe
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\VBCSCompiler.exe.config
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Antlr3.Runtime.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.SqlServer.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Microsoft.Web.Infrastructure.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Newtonsoft.Json.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Helpers.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Mvc.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Optimization.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Razor.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Deployment.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Razor.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\WebGrease.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Helpers.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Mvc.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Optimization.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Razor.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Deployment.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Razor.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Newtonsoft.Json.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Antlr3.Runtime.pdb
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.SqlServer.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.csproj.AssemblyReference.cache
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.csproj.CoreCompileInputs.cache
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.csproj.Up2Date
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.dll
+G:\mvc\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.pdb
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\A3_MVC_ASP.dll.config
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\A3_MVC_ASP.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\A3_MVC_ASP.pdb
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csc.exe
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csc.exe.config
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csc.rsp
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csi.exe
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csi.exe.config
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\csi.rsp
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.Managed.Core.targets
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.AppContext.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Collections.Immutable.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Console.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Globalization.Calendars.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.Compression.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.FileSystem.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Net.Http.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Net.Sockets.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Reflection.Metadata.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.ValueTuple.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.XmlDocument.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.XPath.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\vbc.exe
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\vbc.exe.config
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\vbc.rsp
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\VBCSCompiler.exe
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\roslyn\VBCSCompiler.exe.config
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Antlr3.Runtime.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.SqlServer.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Microsoft.Web.Infrastructure.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Newtonsoft.Json.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Helpers.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Mvc.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Optimization.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Razor.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Deployment.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Razor.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\WebGrease.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Helpers.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Mvc.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Optimization.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.Razor.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Deployment.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\System.Web.WebPages.Razor.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Newtonsoft.Json.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Antlr3.Runtime.pdb
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\EntityFramework.SqlServer.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.csproj.AssemblyReference.cache
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.csproj.CoreCompileInputs.cache
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.csproj.Up2Date
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.dll
+G:\mvc\NHÓM 26 LẬP TRÌNH ASP.NET MVC\A3\A3_MVC_ASP\A3_MVC_ASP\obj\Debug\A3_MVC_ASP.pdb

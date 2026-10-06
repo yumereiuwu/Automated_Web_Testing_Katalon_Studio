@@ -1,0 +1,45 @@
+@model System.Collections.Generic.List<A3_MVC_ASP.Models.LienHe>
+@{
+    ViewBag.Title = "Liên hệ";
+}
+<div class="admin-panel">
+    <div class="admin-table-wrap">
+        <table class="table table-bordered table-hover admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Họ tên</th>
+                    <th>Email</th>
+                    <th>Tiêu đề</th>
+                    <th>Ngày gửi</th>
+                    <th>Đã đọc</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var lh in Model)
+                {
+                    <tr class="@(lh.DaDoc ? "" : "table-light")">
+                        <td>@lh.MaLienHe</td>
+                        <td>@lh.HoTen</td>
+                        <td>@lh.Email</td>
+                        <td>@lh.TieuDe</td>
+                        <td>@lh.NgayGui.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@(lh.DaDoc ? "Có" : "Chưa")</td>
+                        <td>
+                            <a href="@Url.Action("QuanLyLienHeXem", new { id = lh.MaLienHe })" class="btn btn-admin-edit btn-sm">Chi tiết</a>
+                            @using (Html.BeginForm("QuanLyLienHeXoa", "Admin", FormMethod.Post, new { @class = "d-inline ms-1", onsubmit = "return confirm('Bạn có chắc chắn muốn xóa tin nhắn này không?');" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@lh.MaLienHe" />
+                                <button type="submit" class="btn btn-danger btn-admin-del btn-sm">
+                                    <i class="bi bi-trash-fill" aria-hidden="true"></i> Xóa
+                                </button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+@model System.Collections.Generic.List<A3_MVC_ASP.Models.DanhMuc>
+@{
+    ViewBag.Title = "Danh mục";
+}
+<div class="admin-panel">
+    <div class="admin-panel-toolbar">
+        <a href="@Url.Action("DanhMucTao")" class="btn btn-success btn-admin-new"><i class="bi bi-plus-lg" aria-hidden="true"></i> Thêm mới</a>
+    </div>
+    <div class="admin-table-wrap">
+        <table class="table table-bordered table-hover admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên danh mục</th>
+                    <th>Ghi chú</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dm in Model)
+                {
+                    <tr>
+                        <td>@dm.MaDanhMuc</td>
+                        <td>@dm.TenDanhMuc</td>
+                        <td>@(string.IsNullOrWhiteSpace(dm.MoTa) ? "—" : dm.MoTa)</td>
+                        <td>
+                            <a href="@Url.Action("DanhMucSua", new { id = dm.MaDanhMuc })" class="btn btn-admin-edit btn-sm"><i class="bi bi-pencil-fill" aria-hidden="true"></i> Cập nhật</a>
+                            @using (Html.BeginForm("DanhMucXoa", "Admin", FormMethod.Post, new { @class = "d-inline", onsubmit = "return confirm('Xóa danh mục này?');" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@dm.MaDanhMuc" />
+                                <button type="submit" class="btn btn-danger btn-admin-del btn-sm ms-1"><i class="bi bi-trash-fill" aria-hidden="true"></i> Xoá</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

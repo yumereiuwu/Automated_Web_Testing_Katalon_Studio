@@ -1,0 +1,957 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|g:\\mvc\\nh\u00F3m 26 l\u1EADp tr\u00ECnh asp.net mvc\\a3\\a3_mvc_asp\\a3_mvc_asp\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\chinhsachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\chinhsachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\homeindexvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\homeindexvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\danhmuc\\banhkeo.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\danhmuc\\banhkeo.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\danhmuc\\doanman.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\danhmuc\\doanman.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\danhmuc\\snack.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\danhmuc\\snack.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\danhmuc\\douong.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\danhmuc\\douong.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\danhmuc\\doanlien.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\danhmuc\\doanlien.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\danhmuc\\doanhealthy.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\danhmuc\\doanhealthy.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\baocaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\baocaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\adminvms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\adminvms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\doanvata3context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\doanvata3context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\services\\momopaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\services\\momopaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\content\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\content\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\content\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\content\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\content\\site.header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\content\\site.header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\sanphamchitietvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\sanphamchitietvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\sanphamlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\sanphamlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\tintucchitietvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\tintucchitietvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\viewmodelsforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\viewmodelsforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\databasemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\databasemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\content\\site.contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\content\\site.contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\admin\\phieunhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\admin\\phieunhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\vnpaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\vnpaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\icon_logo.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\icon_logo.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\donhang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\donhang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\services\\vnpaypaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\services\\vnpaypaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\services\\vnpaymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\services\\vnpaymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\filters\\quantriauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\filters\\quantriauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\helpers\\giohangsessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\helpers\\giohangsessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\controllers\\tintuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\controllers\\tintuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\models\\baocaodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\models\\baocaodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\admin\\donhangxem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\admin\\donhangxem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\hinhanh\\banner\\banner1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\hinhanh\\banner\\banner1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\admin\\donhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\admin\\donhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\admin\\sanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\admin\\sanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\a3_mvc_asp\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{09CCACE4-DDB6-4AAF-997A-8F29854B006E}|A3_MVC_ASP\\A3_MVC_ASP.csproj|solutionrelative:a3_mvc_asp\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-03T02:04:29.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeIndexVm.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\HomeIndexVm.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\HomeIndexVm.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\HomeIndexVm.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\HomeIndexVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T15:21:19.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Home\\Index.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-03T02:04:44.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "doanman.jpg - Bitmap [1920x1440, 24 bit, JPG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanman.jpg",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\danhmuc\\doanman.jpg",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanman.jpg - Bitmap [1920x1440, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanman.jpg - Bitmap [1920x1440, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-05-04T12:34:40.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\DonHangController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAqwIUAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:29:49.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Web.config",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Web.config",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Web.config",
+              "RelativeToolTip": "A3_MVC_ASP\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-05T13:05:58.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\GioHangController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T13:22:01.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAAAM0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T13:35:04.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAAAOkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-04T12:58:51.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\PaymentController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwDQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:21:01.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChinhSachController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\ChinhSachController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\ChinhSachController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\ChinhSachController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\ChinhSachController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T13:20:09.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\AdminController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwFoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T12:41:59.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\HomeController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:26:40.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "doanlien.jpg - Bitmap [640x640, 24 bit, JPG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanlien.jpg",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\danhmuc\\doanlien.jpg",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanlien.jpg - Bitmap [640x640, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanlien.jpg - Bitmap [640x640, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-05-04T12:31:13.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "snack.png - PNG [1082x634, 32 bit, PNG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\snack.png",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\danhmuc\\snack.png",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\snack.png - PNG [1082x634, 32 bit, PNG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\snack.png - PNG [1082x634, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-04-14T11:21:43.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "doanhealthy.png - PNG [1001x641, 32 bit, PNG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanhealthy.png",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\danhmuc\\doanhealthy.png",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanhealthy.png - PNG [1001x641, 32 bit, PNG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\doanhealthy.png - PNG [1001x641, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-04-14T11:21:43.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "douong.jpg - Bitmap [1200x600, 24 bit, JPG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\douong.jpg",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\danhmuc\\douong.jpg",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\douong.jpg - Bitmap [1200x600, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\douong.jpg - Bitmap [1200x600, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-04-14T11:21:43.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "banhkeo.jpg - Bitmap [500x332, 24 bit, JPG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\banhkeo.jpg",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\danhmuc\\banhkeo.jpg",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\banhkeo.jpg - Bitmap [500x332, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\danhmuc\\banhkeo.jpg - Bitmap [500x332, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-04-14T11:21:43.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BaoCaoController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\BaoCaoController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\BaoCaoController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\BaoCaoController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\BaoCaoController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T05:55:05.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "home.css",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\home.css",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Content\\home.css",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\home.css",
+              "RelativeToolTip": "A3_MVC_ASP\\Content\\home.css",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-03T02:01:11.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DatabaseModels.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\DatabaseModels.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\DatabaseModels.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\DatabaseModels.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\DatabaseModels.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T13:05:58.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DoAnVatA3Context.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\DoAnVatA3Context.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\DoAnVatA3Context.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\DoAnVatA3Context.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\DoAnVatA3Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T13:06:01.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MomoPaymentService.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Services\\MomoPaymentService.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Services\\MomoPaymentService.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Services\\MomoPaymentService.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Services\\MomoPaymentService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T10:39:25.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminVms.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\AdminVms.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\AdminVms.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\AdminVms.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\AdminVms.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:27:22.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\bootstrap.css",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Content\\bootstrap.css",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\bootstrap.css",
+              "RelativeToolTip": "A3_MVC_ASP\\Content\\bootstrap.css",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-03T02:12:10.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-03T02:04:43.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Account\\Login.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-03T02:05:18.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\_ViewStart.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T08:27:35.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\AccountController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:26:45.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T13:35:28.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Home\\About.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T13:27:09.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BundleConfig.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\App_Start\\BundleConfig.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\App_Start\\BundleConfig.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\App_Start\\BundleConfig.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\App_Start\\BundleConfig.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:26:08.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "site.header.css",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\site.header.css",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Content\\site.header.css",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\site.header.css",
+              "RelativeToolTip": "A3_MVC_ASP\\Content\\site.header.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-03T02:01:10.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\App_Start\\RouteConfig.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:29:43.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FilterConfig.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\App_Start\\FilterConfig.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\App_Start\\FilterConfig.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\App_Start\\FilterConfig.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\App_Start\\FilterConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:26:06.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TinTucChiTietVm.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\TinTucChiTietVm.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\TinTucChiTietVm.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\TinTucChiTietVm.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\TinTucChiTietVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T15:21:54.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SanPhamChiTietVm.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\SanPhamChiTietVm.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\SanPhamChiTietVm.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\SanPhamChiTietVm.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\SanPhamChiTietVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T15:21:55.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SanPhamListVm.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\SanPhamListVm.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\SanPhamListVm.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\SanPhamListVm.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\SanPhamListVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T13:06:06.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "PhieuNhap.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\PhieuNhap.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Admin\\PhieuNhap.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\PhieuNhap.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Admin\\PhieuNhap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2026-04-23T07:02:20.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ViewModelsForms.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\ViewModelsForms.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\ViewModelsForms.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\ViewModelsForms.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\ViewModelsForms.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:27:25.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Site.css",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\Site.css",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Content\\Site.css",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\Site.css",
+              "RelativeToolTip": "A3_MVC_ASP\\Content\\Site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-23T07:02:34.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "site.contact.css",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\site.contact.css",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Content\\site.contact.css",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Content\\site.contact.css",
+              "RelativeToolTip": "A3_MVC_ASP\\Content\\site.contact.css",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-23T07:02:35.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "VnpayController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\VnpayController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\VnpayController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\VnpayController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\VnpayController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:50:39.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "DatHang.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\DonHang\\DatHang.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\DonHang\\DatHang.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\DonHang\\DatHang.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\DonHang\\DatHang.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2026-04-13T12:47:56.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\SanPhamController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\SanPhamController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAWwBAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:26:36.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "VnpayPaymentService.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Services\\VnpayPaymentService.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Services\\VnpayPaymentService.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Services\\VnpayPaymentService.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Services\\VnpayPaymentService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAUwBcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:52:51.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "icon_logo.jpg - Bitmap [564x564, 24 bit, JPG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\icon_logo.jpg",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\icon_logo.jpg",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\icon_logo.jpg - Bitmap [564x564, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\icon_logo.jpg - Bitmap [564x564, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-04-05T13:36:29.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "QuanTriAuthorizeAttribute.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Filters\\QuanTriAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Filters\\QuanTriAuthorizeAttribute.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Filters\\QuanTriAuthorizeAttribute.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Filters\\QuanTriAuthorizeAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:26:24.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "VnpayModels.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Services\\VnpayModels.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Services\\VnpayModels.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Services\\VnpayModels.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Services\\VnpayModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T12:07:37.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GioHangSessionHelper.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Helpers\\GioHangSessionHelper.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Helpers\\GioHangSessionHelper.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Helpers\\GioHangSessionHelper.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Helpers\\GioHangSessionHelper.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwBoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:28:58.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TinTucController.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\TinTucController.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Controllers\\TinTucController.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Controllers\\TinTucController.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Controllers\\TinTucController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:26:33.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "BaoCaoDtos.cs",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\BaoCaoDtos.cs",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Models\\BaoCaoDtos.cs",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Models\\BaoCaoDtos.cs",
+              "RelativeToolTip": "A3_MVC_ASP\\Models\\BaoCaoDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:27:20.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "DonHangXem.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\DonHangXem.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Admin\\DonHangXem.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\DonHangXem.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Admin\\DonHangXem.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T08:25:59.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "banner1.jpg - Bitmap [1400x700, 24 bit, JPG]",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\banner\\banner1.jpg",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\HinhAnh\\banner\\banner1.jpg",
+              "ToolTip": "G:\\mvc\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\banner\\banner1.jpg - Bitmap [1400x700, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\HinhAnh\\banner\\banner1.jpg - Bitmap [1400x700, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-04-05T14:18:46.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "DonHang.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\DonHang.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Admin\\DonHang.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\DonHang.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Admin\\DonHang.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T13:35:42.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "SanPham.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\SanPham.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\Admin\\SanPham.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\Admin\\SanPham.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\Admin\\SanPham.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T13:35:36.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\SanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Views\\SanPham\\Index.cshtml",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Views\\SanPham\\Index.cshtml",
+              "RelativeToolTip": "A3_MVC_ASP\\Views\\SanPham\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T13:07:24.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Web.Release.config",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Web.Release.config",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Web.Release.config",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Web.Release.config",
+              "RelativeToolTip": "A3_MVC_ASP\\Web.Release.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-05T13:05:58.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Web.Debug.config",
+              "DocumentMoniker": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Web.Debug.config",
+              "RelativeDocumentMoniker": "A3_MVC_ASP\\Web.Debug.config",
+              "ToolTip": "G:\\mvc\\NH\u00D3M 26 L\u1EACP TR\u00CCNH ASP.NET MVC\\A3\\A3_MVC_ASP\\A3_MVC_ASP\\Web.Debug.config",
+              "RelativeToolTip": "A3_MVC_ASP\\Web.Debug.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-05T13:05:58.504Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

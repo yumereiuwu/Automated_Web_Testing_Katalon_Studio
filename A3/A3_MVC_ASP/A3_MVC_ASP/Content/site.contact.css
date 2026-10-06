@@ -1,0 +1,100 @@
+/*
+ * site.contact.css — Trang Liên hệ (LienHe)
+ * Nạp qua: ~/Content/css (load global cho mọi trang shop; chỉ class contact-* dùng ở đây)
+ * Chức năng: lưới form/map/card liên hệ, tiêu đề và ô nhập tin nhắn gửi shop.
+ */
+/* Storefront contact page */
+
+.contact-wrap {
+    max-width: 1040px;
+}
+
+.contact-headline {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--snack-red-dark);
+    margin-bottom: 0.45rem;
+}
+
+.contact-subtitle {
+    color: #6d6154;
+    margin-bottom: 1.2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 1rem;
+}
+
+.contact-card {
+    background: #fff;
+    border: 1px solid #efe6d5;
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: #2f2f2f;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.92rem;
+    color: #544b43;
+    margin-bottom: 0.75rem;
+}
+
+.contact-info-item i {
+    color: var(--snack-red);
+    font-size: 1.05rem;
+    margin-top: 2px;
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+    color: #463f38;
+    font-size: 0.88rem;
+    margin-bottom: 0.35rem;
+}
+
+.contact-form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ded6c9;
+    padding: 0.55rem 0.7rem;
+    background: #fff;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--snack-gold);
+    box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.18);
+}
+
+.contact-submit {
+    border-radius: 9px;
+    padding: 0.52rem 1rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.contact-faq {
+    border-top: 1px solid #e9e0d3;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-headline {
+        font-size: 1.65rem;
+    }
+}

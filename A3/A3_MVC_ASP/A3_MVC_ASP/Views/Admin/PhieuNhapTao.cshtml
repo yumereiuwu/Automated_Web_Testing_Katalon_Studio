@@ -1,0 +1,67 @@
+@model A3_MVC_ASP.Models.PhieuNhapTaoVm
+@using System.Web.Mvc
+@{
+    ViewBag.Title = "Tạo phiếu nhập";
+    var dsSanPham = ViewBag.SanPhams as System.Collections.Generic.List<A3_MVC_ASP.Models.SanPham>;
+    var dsNhaCungCap = ViewBag.NhaCungCaps as System.Collections.Generic.List<A3_MVC_ASP.Models.NhaCungCap>;
+}
+<div class="admin-panel mx-auto" style="max-width: 560px;">
+    <p class="small text-muted">Sau khi lưu, trigger SQL sẽ cộng tồn và cập nhật tổng tiền phiếu.</p>
+    @using (Html.BeginForm("PhieuNhapTao", "Admin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="mb-2"><label class="form-label">Mã phiếu</label>@Html.TextBoxFor(m => m.MaPhieu, new { @class = "form-control", placeholder = "PN004" })</div>
+        <div class="mb-2"><label class="form-label">Nhà cung cấp</label>@Html.DropDownListFor(m => m.MaNhaCungCap, new SelectList(dsNhaCungCap ?? new System.Collections.Generic.List<A3_MVC_ASP.Models.NhaCungCap>(), "MaNhaCungCap", "TenNhaCungCap"), "(Chọn)", new { @class = "form-select" })</div>
+        <div class="mb-2"><label class="form-label">Ghi chú</label>@Html.TextAreaFor(m => m.GhiChu, new { @class = "form-control", rows = 2 })</div>
+        <hr />
+        <div class="mb-2"><label class="form-label">Sản phẩm</label>@Html.DropDownListFor(m => m.MaSanPham, new SelectList(dsSanPham ?? new System.Collections.Generic.List<A3_MVC_ASP.Models.SanPham>(), "MaSanPham", "TenSanPham"), new { @class = "form-select" })</div>
+        <div class="mb-2"><label class="form-label">Số lượng</label>@Html.TextBoxFor(m => m.SoLuong, new { @class = "form-control", type = "number", min = 1 })</div>
+        <div class="mb-3">
+            <label class="form-label">Đơn giá nhập</label>
+            <input id="DonGiaNhapText"
+                   class="form-control js-money"
+                   inputmode="numeric"
+                   autocomplete="off"
+                   value="@(Model != null ? Model.DonGiaNhap.ToString("N0") : "")" />
+            @Html.HiddenFor(m => m.DonGiaNhap, new { id = "DonGiaNhap" })
+        </div>
+        <button type="submit" class="btn btn-success btn-sm">Lưu phiếu</button>
+        <a href="@Url.Action("PhieuNhap")" class="btn btn-outline-secondary btn-sm">Hủy</a>
+    }
+</div>
+
+@section scripts {
+    <script>
+        (function () {
+            function chiSo(s) {
+                return (s || "").toString().replace(/[^\d]/g, "");
+            }
+
+            function dinhDangVn(n) {
+                n = chiSo(n);
+                if (!n) return "";
+                return n.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            }
+
+            function dongBoGiaNhap() {
+                var oNhap = document.getElementById("DonGiaNhapText");
+                var oAn = document.getElementById("DonGiaNhap");
+                if (!oNhap || !oAn) return;
+                oAn.value = chiSo(oNhap.value);
+            }
+
+            document.addEventListener("input", function (e) {
+                var el = e.target;
+                if (!el || !el.classList || !el.classList.contains("js-money")) return;
+                var pos = el.selectionStart || 0;
+                var before = el.value || "";
+                el.value = dinhDangVn(before);
+                dongBoGiaNhap();
+                try { el.setSelectionRange(pos, pos); } catch (_) { }
+            }, true);
+
+            dongBoGiaNhap();
+        })();
+    </script>
+}

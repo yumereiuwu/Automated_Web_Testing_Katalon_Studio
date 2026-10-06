@@ -1,0 +1,200 @@
+/*
+ * admin.components.css — Thành phần dùng chung trong admin
+ * Nạp qua: ~/Content/admincss
+ * Chức năng: modal tìm nhanh, tiêu đề trang/breadcrumb admin, panel, bảng dữ liệu, nút và form block.
+ */
+/* Admin: common components (quick search, page head, panels, tables, buttons) */
+
+.admin-quick-search {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(2, 6, 23, .45);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 9vh 1rem 1rem;
+}
+
+.admin-quick-search-panel {
+    width: 100%;
+    max-width: 620px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 16px 48px rgba(2, 6, 23, .25);
+    overflow: hidden;
+    border: 1px solid #e6ebf2;
+}
+
+.admin-quick-search-head {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .65rem .8rem;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.admin-quick-search-head input {
+    border: 0;
+    outline: 0;
+    flex: 1;
+    font-size: .95rem;
+}
+
+.admin-quick-search-head button {
+    border: 0;
+    background: #f8fafc;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.admin-quick-search-list {
+    max-height: 52vh;
+    overflow: auto;
+    padding: .4rem;
+}
+
+.admin-quick-search-list a {
+    display: block;
+    text-decoration: none;
+    color: #1e293b;
+    border-radius: 10px;
+    padding: .55rem .65rem;
+    font-size: .9rem;
+}
+
+.admin-quick-search-list a:hover {
+    background: #f1f5f9;
+}
+
+/* Page */
+.admin-page {
+    padding: 1.25rem 1.5rem 2rem;
+    flex: 1;
+}
+
+.admin-page-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.admin-page-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.admin-breadcrumb {
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    max-width: 100%;
+}
+
+.admin-breadcrumb a {
+    color: #3b7ec4;
+    text-decoration: none;
+}
+
+.admin-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.admin-breadcrumb-sep {
+    opacity: 0.6;
+}
+
+/* White card panel */
+.admin-panel {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, .06), 0 10px 24px rgba(15, 23, 42, .04);
+    border: 1px solid #e9edf3;
+    padding: 1rem 1.15rem;
+}
+
+.admin-panel-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+}
+
+.admin-table-wrap {
+    overflow-x: auto;
+}
+
+.admin-table {
+    margin-bottom: 0;
+    font-size: 0.86rem;
+}
+
+.admin-table thead th {
+    border-bottom-width: 1px;
+    font-weight: 600;
+    color: #343a40;
+    background: #fafbfc;
+    white-space: nowrap;
+}
+
+.admin-table.table-hover tbody tr:hover {
+    background-color: #f5f7f9;
+}
+
+.btn-admin-new {
+    background: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    font-size: 0.86rem;
+    padding: 0.35rem 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.btn-admin-new:hover {
+    background: #218838;
+    border-color: #1e7e34;
+    color: #fff;
+}
+
+.btn-admin-edit {
+    background: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+    font-size: 0.78rem;
+    padding: 0.25rem 0.55rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.btn-admin-edit:hover {
+    background: #138496;
+    border-color: #117a8b;
+    color: #fff;
+}
+
+.btn-admin-del {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.55rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.admin-action-group form {
+    display: inline;
+}
+

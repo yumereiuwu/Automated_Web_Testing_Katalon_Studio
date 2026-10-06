@@ -1,0 +1,86 @@
+@model System.Collections.Generic.List<A3_MVC_ASP.Models.CartLine>
+@using A3_MVC_ASP.Helpers
+@{
+    ViewBag.Title = "Giỏ hàng";
+    var tong = GioHangSessionHelper.TongTien(Session);
+}
+<div class="container body-content-page">
+    <h2 class="fw-bold mb-3" style="color: #9a1830;">Giỏ hàng</h2>
+    @if (TempData["Msg"] != null)
+    {
+        <div class="alert alert-warning">@TempData["Msg"]</div>
+    }
+    @if (Model == null || !Model.Any())
+    {
+        <p>Giỏ hàng đang trống. <a href="@Url.Action("Index", "SanPham")">Xem sản phẩm</a></p>
+    }
+    else
+    {
+        <div class="table-responsive rounded-3 border cart-table-wrap">
+            <table class="table table-hover mb-0 cart-table">
+                <thead style="background: #d4a017; color: #fff;">
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th class="text-end">Đơn giá</th>
+                        <th class="text-center" style="width: 140px;">Số lượng</th>
+                        <th class="text-end">Thành tiền</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var line in Model)
+                    {
+                        <tr>
+                            <td>@line.TenSanPham</td>
+                            <td class="text-end">@line.GiaBan.ToString("N0") đ</td>
+                            <td>
+                                @using (Html.BeginForm("CapNhat", "GioHang", FormMethod.Post, new { @class = "d-flex gap-1 align-items-center justify-content-center" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@line.MaSanPham" />
+                                    <input type="number" name="soLuong" value="@line.SoLuong" min="1" class="form-control form-control-sm" style="width: 70px;" />
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Cập nhật</button>
+                                }
+                            </td>
+                            <td class="text-end fw-semibold">@line.ThanhTienHang.ToString("N0") đ</td>
+                            <td>
+                                @using (Html.BeginForm("Xoa", "GioHang", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@line.MaSanPham" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-3 fs-5">Tạm tính: <strong>@tong.ToString("N0") đ</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+            <a href="@Url.Action("Index", "SanPham")" class="btn btn-outline-secondary btn-lg">
+                <i class="bi bi-arrow-left-short"></i> Quay lại sản phẩm
+            </a>
+            <a href="@Url.Action("DatHang", "DonHang")" class="btn btn-danger btn-lg">Đặt hàng — Thanh toán</a>
+        </div>
+    }
+</div>
+
+<style>
+    .cart-table-wrap {
+        border: 1px solid #d9d9d9 !important;
+        box-shadow: 0 6px 16px rgba(20, 20, 20, 0.06);
+    }
+
+    .cart-table thead th {
+        border-bottom: 1px solid #c89b1d !important;
+    }
+
+    .cart-table > :not(caption) > * > * {
+        border-color: #e3e3e3 !important;
+    }
+
+    .cart-table tbody tr td {
+        border-top: 1px solid #ececec;
+    }
+</style>

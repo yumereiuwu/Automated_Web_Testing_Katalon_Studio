@@ -1,0 +1,89 @@
+@model System.Collections.Generic.List<A3_MVC_ASP.Models.SanPhamAdminRowVm>
+@{
+    ViewBag.Title = "Sản phẩm";
+    var trangHienTai = ViewBag.Page != null ? (int)ViewBag.Page : 1;
+    var tongTrang = ViewBag.TotalPages != null ? (int)ViewBag.TotalPages : 1;
+}
+<div class="admin-panel">
+    <div class="admin-panel-toolbar">
+        <a href="@Url.Action("SanPhamTao")" class="btn btn-success btn-admin-new"><i class="bi bi-plus-lg" aria-hidden="true"></i> Thêm mới</a>
+    </div>
+    <div class="admin-table-wrap">
+        <table class="table table-bordered table-hover admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Danh mục</th>
+                    <th>Giá bán</th>
+                    <th>Tồn</th>
+                    <th>Hiệu lực</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model == null || Model.Count == 0)
+                {
+                    <tr>
+                        <td colspan="7" class="text-center text-muted">Chưa có sản phẩm.</td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var r in Model)
+                    {
+                        <tr>
+                            <td>@r.MaSanPham</td>
+                            <td>@r.TenSanPham</td>
+                            <td>@r.TenDanhMuc</td>
+                            <td>@r.GiaBan.ToString("N0") đ</td>
+                            <td>@r.SoLuongTon</td>
+                            <td>@(r.ConHoatDong ? "Có" : "Ngưng")</td>
+                            <td>
+                                <a href="@Url.Action("SanPhamXem", new { id = r.MaSanPham })" class="btn btn-outline-primary btn-sm">Chi tiết</a>
+                                <a href="@Url.Action("SanPhamSua", new { id = r.MaSanPham })" class="btn btn-admin-edit btn-sm ms-1"><i class="bi bi-pencil-fill" aria-hidden="true"></i> Cập nhật</a>
+                                @if (r.ConHoatDong)
+                                {
+                                    using (Html.BeginForm("SanPhamNgung", "Admin", FormMethod.Post, new { @class = "d-inline" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@r.MaSanPham" />
+                                        <button type="submit" class="btn btn-outline-secondary btn-sm ms-1" onclick="return confirm('Ngưng bán sản phẩm này?');">Ngưng</button>
+                                    }
+                                }
+                                @using (Html.BeginForm("SanPhamXoa", "Admin", FormMethod.Post, new { @class = "d-inline" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@r.MaSanPham" />
+                                    <button type="submit" class="btn btn-danger btn-admin-del btn-sm ms-1"
+                                            onclick="return confirm('XÓA HẲN sản phẩm và dữ liệu liên quan?');">
+                                        <i class="bi bi-trash-fill" aria-hidden="true"></i> Xoá
+                                    </button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    @if (tongTrang > 1)
+    {
+        <nav class="mt-3" aria-label="Phân trang sản phẩm quản trị">
+            <ul class="pagination pagination-sm mb-0">
+                <li class="page-item @(trangHienTai <= 1 ? "disabled" : null)">
+                    <a class="page-link" href="@Url.Action("SanPham", new { page = trangHienTai - 1 })">«</a>
+                </li>
+                @for (var p = 1; p <= tongTrang; p++)
+                {
+                    <li class="page-item @(p == trangHienTai ? "active" : null)">
+                        <a class="page-link" href="@Url.Action("SanPham", new { page = p })">@p</a>
+                    </li>
+                }
+                <li class="page-item @(trangHienTai >= tongTrang ? "disabled" : null)">
+                    <a class="page-link" href="@Url.Action("SanPham", new { page = trangHienTai + 1 })">»</a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>

@@ -1,0 +1,136 @@
+@model A3_MVC_ASP.Models.SanPhamChiTietVm
+@{
+    ViewBag.Title = Model.TenSanPham;
+    var giaSauGiam = Model.GiaBan * (100 - Model.PhanTramGiam) / 100m;
+    giaSauGiam = Math.Round(giaSauGiam, 0, MidpointRounding.AwayFromZero);
+}
+<div class="container body-content-page product-detail-page">
+    <div class="row g-4 align-items-start justify-content-center product-detail-layout">
+        <div class="col-12 col-md-5 col-lg-4 product-detail-left">
+            <div class="product-detail-image-card h-100">
+                @if (Model.PhanTramGiam > 0)
+                {
+                    <span class="product-detail-sale">-@Model.PhanTramGiam%</span>
+                }
+                <img src="@Url.Content("~/Content/SanPhamImages/" + (Model.HinhAnh ?? "no-image.png"))"
+                     class="product-detail-image"
+                     alt="@Model.TenSanPham"
+                     onerror="this.onerror=null;this.src='@Url.Content("~/Content/SanPhamImages/placeholder.svg")';" />
+            </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 product-detail-right">
+            <div class="product-detail-info-card h-100">
+                <p class="product-detail-category mb-1">@Model.TenDanhMuc</p>
+                <h1 class="product-detail-title">@Model.TenSanPham</h1>
+
+                <div class="product-detail-price-row">
+                    <span class="product-detail-price">@giaSauGiam.ToString("N0") đ</span>
+                    <span class="product-detail-unit">/ @Model.DonViTinh</span>
+                </div>
+                @if (Model.PhanTramGiam > 0)
+                {
+                    <div class="product-detail-old-price">
+                        <del>@Model.GiaBan.ToString("N0") đ</del>
+                        <span class="badge bg-danger">Tiết kiệm @Model.PhanTramGiam%</span>
+                    </div>
+                }
+
+                <div class="product-detail-meta">
+                    <span class="product-detail-stock-label">Tồn kho:</span>
+                    <strong class="@(Model.SoLuongTon > 0 ? "text-success" : "text-danger")">@Model.SoLuongTon</strong>
+                </div>
+
+                <p class="product-detail-desc mb-0">@Model.MoTa</p>
+
+                @if (Model.SoLuongTon > 0)
+                {
+                    <form class="product-detail-buy-form" method="get" action="@Url.Action("Them", "GioHang")">
+                        <input type="hidden" name="id" value="@Model.MaSanPham" />
+                        <div>
+                            <label class="form-label small mb-1">Số lượng</label>
+                            <input type="number" name="sl" value="1" min="1" max="@Model.SoLuongTon" class="form-control product-detail-qty" />
+                        </div>
+                        <button type="submit" class="btn btn-danger product-detail-buy-btn">Thêm vào giỏ</button>
+                    </form>
+                }
+                else
+                {
+                    <p class="text-danger fw-semibold mt-3 mb-0">Tạm hết hàng</p>
+                }
+
+                <p class="mt-4 mb-0">
+                    <a href="@Url.Action("Index")" class="btn btn-outline-secondary product-detail-back-btn">
+                        <i class="bi bi-arrow-left-short"></i> Danh sách sản phẩm
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-detail-page .product-detail-layout {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .product-detail-page .product-detail-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-detail-page .product-detail-image-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.75rem;
+        border: 1px solid #ece7db;
+        border-radius: 16px;
+        background: #fff;
+    }
+
+    .product-detail-page img.product-detail-image {
+        width: 220px !important;
+        height: 220px !important;
+        max-width: 220px !important;
+        max-height: 220px !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    .product-detail-page .product-detail-info-card {
+        border: 1px solid #ece7db;
+        border-radius: 16px;
+        background: #fff;
+        padding: 1.1rem 1.2rem 1.25rem;
+    }
+
+    .product-detail-page .product-detail-buy-btn {
+        margin-top: 20px;
+        min-width: 160px;
+        font-weight: 700;
+    }
+
+    .product-detail-page .product-detail-back-btn {
+        border-radius: 999px;
+        padding: 0.48rem 0.9rem;
+        font-weight: 600;
+        color: #4f4f4f;
+        border-color: #cfcfcf;
+    }
+
+    .product-detail-page .product-detail-back-btn:hover {
+        background: #f4f4f4;
+        color: #2f2f2f;
+        border-color: #b8b8b8;
+    }
+
+    @@media (max-width: 767.98px) {
+        .product-detail-page img.product-detail-image {
+            width: 180px !important;
+            height: 180px !important;
+            max-width: 180px !important;
+            max-height: 180px !important;
+        }
+    }
+</style>

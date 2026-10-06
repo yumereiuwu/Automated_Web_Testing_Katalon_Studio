@@ -1,0 +1,53 @@
+@model A3_MVC_ASP.Models.DonHang
+@{
+    var daThanhToan = string.Equals(Model.TrangThaiThanhToan, "DaThanhToan", System.StringComparison.OrdinalIgnoreCase);
+    var laMoMo = string.Equals(Model.HinhThucThanhToan, "MoMo", System.StringComparison.OrdinalIgnoreCase);
+    var pay = ViewBag.ThanhToan as A3_MVC_ASP.Models.ThanhToan;
+    ViewBag.Title = laMoMo
+        ? (daThanhToan ? "Thanh toán MoMo thành công" : "Chờ thanh toán MoMo")
+        : "Đặt hàng thành công";
+}
+<div class="container body-content-page text-center py-5">
+    @if (laMoMo)
+    {
+        if (daThanhToan)
+        {
+            <div class="display-4 mb-3 text-success">✓</div>
+            <h2 class="fw-bold" style="color: #9a1830;">Thanh toán MoMo thành công!</h2>
+        }
+        else
+        {
+            <div class="display-4 mb-3 text-warning">⏳</div>
+            <h2 class="fw-bold" style="color: #9a1830;">Đơn hàng đã tạo — đang chờ thanh toán MoMo</h2>
+            <p class="text-muted mb-0">Nếu bạn vừa quét QR nhưng báo hết hạn/không tồn tại, hãy tạo lại thanh toán hoặc thử quét bằng app MoMo (môi trường sandbox đôi lúc không ổn định).</p>
+        }
+    }
+    else
+    {
+        <div class="display-4 mb-3 text-success">✓</div>
+        <h2 class="fw-bold" style="color: #9a1830;">Cảm ơn bạn đã đặt hàng!</h2>
+    }
+    @if (TempData["Msg"] != null)
+    {
+        <p class="lead">@TempData["Msg"]</p>
+    }
+    <p class="mt-3">Mã đơn: <strong>@Model.MaDon</strong> — Tổng thanh toán: <strong>@Model.TongThanhToan.ToString("N0") đ</strong></p>
+    @if (pay != null)
+    {
+        <p class="small text-muted mb-0">
+            Thanh toán: <strong>@pay.Provider</strong> — @pay.SoTien.ToString("N0") đ — @pay.NgayThanhToan.ToString("dd/MM/yyyy HH:mm:ss")
+        </p>
+    }
+
+    @if (laMoMo && !daThanhToan)
+    {
+        <div class="mt-3 d-flex gap-2 justify-content-center flex-wrap">
+            <a href="@Url.Action("MomoCreate", "Payment", new { id = Model.MaDonHang })" class="btn btn-danger">Tạo lại thanh toán MoMo</a>
+            <a href="@Url.Action("Index", "GioHang")" class="btn btn-outline-secondary">Về giỏ hàng</a>
+        </div>
+    }
+    else
+    {
+        <a href="@Url.Action("Index", "SanPham")" class="btn btn-danger mt-3">Tiếp tục mua sắm</a>
+    }
+</div>
