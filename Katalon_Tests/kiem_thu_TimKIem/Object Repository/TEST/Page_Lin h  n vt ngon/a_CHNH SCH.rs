@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_CHNH SCH</name>
+   <tag></tag>
+   <elementGuidId>1daf8628-2aec-4a21-9034-222509eacc23</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-item ') and (position() = 6)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-link ') and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-toggle ')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>.nav-item:nth-child(6) .nav-link.dropdown-toggle</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;CHÍNH SÁCH&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>8e408009-9e4d-4031-8bb5-5ec7366e57e1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>nav-link dropdown-toggle</value>
+      <webElementGuid>772e960b-8d84-4dff-8945-57d42688e90f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>#</value>
+      <webElementGuid>042ad0fb-369d-49f3-ba6a-301cd9a3835a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>1199498a-f9d8-42c6-b4b6-3f97fc80ea3d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-bs-toggle</name>
+      <type>Main</type>
+      <value>dropdown</value>
+      <webElementGuid>410d91e8-9610-4543-a5dd-0eb6750376a4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-expanded</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>c7307d53-a96a-42af-be0d-4bc5a0ea1d6c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>CHÍNH SÁCH</value>
+      <webElementGuid>bb3dbff1-b8e0-4389-8125-0cc881a1b64f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-149c0db7da63483d61480d6654c765ac</value>
+      <webElementGuid>a46b8bdb-ebaf-43c0-98df-fa2309ac5c10</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-item ') and (position() = 6)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-link ') and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-toggle ')]</value>
+      <webElementGuid>0c103078-44b5-4000-b4fa-9facb560f7a3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-item ') and (position() = 6)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-link ') and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-toggle ')]</value>
+      <webElementGuid>b772ab3f-9206-4fcb-aef4-c493e6b0eacb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '#' and (text() = 'CHÍNH SÁCH' or . = 'CHÍNH SÁCH')]</value>
+      <webElementGuid>62f53b67-66cd-40b8-bc55-dec29029b441</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

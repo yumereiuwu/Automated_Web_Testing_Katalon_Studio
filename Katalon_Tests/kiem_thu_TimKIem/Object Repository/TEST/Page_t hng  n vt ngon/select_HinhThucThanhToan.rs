@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_HinhThucThanhToan</name>
+   <tag></tag>
+   <elementGuidId>dd789f70-febe-4c8d-955e-752f61580b32</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id = 'HinhThucThanhToan']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#HinhThucThanhToan</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>#HinhThucThanhToan</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>14d7e897-2ade-42d4-ad11-25ba4808f710</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>form-select</value>
+      <webElementGuid>3cf307d7-d0ba-40fd-ac43-67a7cca02bd5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-val</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>24572516-921d-41b1-a79a-4029cc148a01</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-val-required</name>
+      <type>Main</type>
+      <value>The HinhThucThanhToan field is required.</value>
+      <webElementGuid>e5ccd36a-c810-4d51-9e38-a6817e28a9e8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>HinhThucThanhToan</value>
+      <webElementGuid>e20ed6f0-08c2-46a8-8d02-24555abbb2ee</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>HinhThucThanhToan</value>
+      <webElementGuid>25b510ee-d073-4aff-bece-f3029bbedbcb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Tiền mặt khi nhận hàng
+VNPay
+MoMo
+</value>
+      <webElementGuid>aa3259c0-e070-4124-b952-7a7ac2ffdf69</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-f358b4801eda2268af05be2c97d82b2b</value>
+      <webElementGuid>1cbc446f-1e8f-40bd-8bdf-6c612130895c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id = 'HinhThucThanhToan']</value>
+      <webElementGuid>d6a4d27a-a1d7-4fe6-b64a-6066df7946a4</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@id = 'HinhThucThanhToan']</value>
+      <webElementGuid>af823361-872b-4db5-8577-98f438388611</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@id = 'HinhThucThanhToan' and @name = 'HinhThucThanhToan' and (text() = 'Tiền mặt khi nhận hàng
+VNPay
+MoMo
+' or . = 'Tiền mặt khi nhận hàng
+VNPay
+MoMo
+')]</value>
+      <webElementGuid>52b85918-497e-43d4-a501-1245f5afce75</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Tt c sn phm</name>
+   <tag></tag>
+   <elementGuidId>cfb105c2-be10-41e5-a9d7-7be418fcbda6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-item ') and (@href = '/SanPham')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>.dropdown-item[href=&quot;\/SanPham&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=link[name=&quot;Tất cả sản phẩm&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>b8175b2f-b80d-4679-8f0d-8afbc87f0f9e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>dropdown-item</value>
+      <webElementGuid>1451899f-bbd0-4f1b-bc6b-a5e6fd36adc0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/SanPham</value>
+      <webElementGuid>3e7df28e-b9ae-410a-8009-9b8ff9e7d9ba</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Tất cả sản phẩm</value>
+      <webElementGuid>edccc468-47e9-4899-93a1-8fab2eaac337</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-173fd9ef58b0e31cd81ccff7b782ff1f</value>
+      <webElementGuid>6ce74932-d155-4595-ad58-662322d4c64b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-item ') and (@href = '/SanPham')]</value>
+      <webElementGuid>ef115635-4e67-4680-a491-a289aeef9a70</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-item ') and (@href = '/SanPham')]</value>
+      <webElementGuid>b378c4d3-fa0c-43ab-818b-7211fd266c57</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/SanPham' and (text() = 'Tất cả sản phẩm' or . = 'Tất cả sản phẩm')]</value>
+      <webElementGuid>b7e407f9-a372-43f9-bef3-f6461fb3ef25</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
