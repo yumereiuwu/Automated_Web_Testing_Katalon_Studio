@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_TK</name>
+   <tag></tag>
+   <integratedEntity>
+      <productName>TESTOPS</productName>
+      <properties>
+         <entry>
+            <key>createdByName</key>
+            <value>Hoang Nguyen Huy</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByName</key>
+            <value>Hoang Nguyen Huy</value>
+         </entry>
+         <entry>
+            <key>createdByUuid</key>
+            <value>40aec78f-03ce-41ca-9302-9450e4fe1fcc</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByUuid</key>
+            <value>40aec78f-03ce-41ca-9302-9450e4fe1fcc</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9a42ca98-deb8-4009-a56d-c3da6f562197</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_SN PHM</name>
+   <tag></tag>
+   <elementGuidId>38628ba2-01c0-4c18-b932-02293ff1bf47</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-item ') and (position() = 3)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-link ') and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-toggle ')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>.nav-item:nth-child(3) .nav-link.dropdown-toggle</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;SẢN PHẨM&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>29688e7e-b776-4208-aa08-bd5653290c0e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>nav-link dropdown-toggle</value>
+      <webElementGuid>7f8ad1c6-40b0-4078-b250-685918bd1e3b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>#</value>
+      <webElementGuid>bd9cc71f-3f50-45d2-acce-0a558daedbc5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>ee448d66-934a-429e-a5d9-e3616433c60c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-bs-toggle</name>
+      <type>Main</type>
+      <value>dropdown</value>
+      <webElementGuid>222af520-45bb-4c30-b74b-c624959dfe38</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-expanded</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>8b8d3916-569d-44ad-a483-4e0a6783f8a6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>SẢN PHẨM</value>
+      <webElementGuid>18b27cce-afa6-4053-965d-feda41a1b07e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-b83f896f27105baad7512442a0653579</value>
+      <webElementGuid>46b37b0c-36e0-4f54-ab83-9c573d41e40d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-item ') and (position() = 3)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-link ') and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-toggle ')]</value>
+      <webElementGuid>4b96ef8f-8f98-4e0a-bfba-45ce19b0ba2b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-item ') and (position() = 3)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' nav-link ') and contains(concat(' ', normalize-space(@class), ' '), ' dropdown-toggle ')]</value>
+      <webElementGuid>330c3af0-a094-472c-b52d-197ab1a4c0dc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '#' and (text() = 'SẢN PHẨM' or . = 'SẢN PHẨM')]</value>
+      <webElementGuid>a7ea49f3-29ae-4199-a16e-a4063732591e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
